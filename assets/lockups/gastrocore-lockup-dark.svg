@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>GastroCore by CESIC • Foodservice ERP — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#FBBF24"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#F97316"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">GastroCore</text>
+  <rect x="349" y="44" width="8" height="8" fill="#F59E0B"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Foodservice ERP</text>
+</svg>

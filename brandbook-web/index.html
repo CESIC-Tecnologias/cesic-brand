@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CESIC Tecnologias — Brand Book &amp; Design Language v1.0</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cesic-emerald-core: #059669;
+      --cesic-emerald-bright: #10B981;
+      --cesic-emerald-luminous: #34D399;
+      --cesic-emerald-deep: #047857;
+      --cesic-blue-core: #0284C7;
+      --cesic-blue-bright: #0EA5E9;
+      --cesic-blue-luminous: #38BDF8;
+      --cesic-gastro-amber: #F59E0B;
+      --cesic-gastro-orange: #EA580C;
+      --cesic-surface-canvas: #FAFAFA;
+      --cesic-surface-white: #FFFFFF;
+      --cesic-surface-slate: #0F172A;
+      --cesic-surface-obsidian: #090D16;
+      --cesic-border: #E4E4E7;
+      --cesic-border-dark: #1E293B;
+      --font-display: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cesic-surface-canvas);
+      color: var(--cesic-surface-slate);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* IBM Design Language Layout Shell */
+    .app-shell {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      min-height: 100vh;
+    }
+    @media (max-width: 1024px) {
+      .app-shell { grid-template-columns: 1fr; }
+    }
+
+    /* Left Sticky Navigation (IBM Carbon / Design Language Style) */
+    .sidebar {
+      background: var(--cesic-surface-obsidian);
+      color: #F8FAFC;
+      border-right: 1px solid var(--cesic-border-dark);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px 22px;
+      z-index: 40;
+    }
+    @media (max-width: 1024px) {
+      .sidebar {
+        position: relative;
+        height: auto;
+        padding: 20px;
+      }
+    }
+    .sidebar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--cesic-border-dark);
+    }
+    .sidebar-title {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: -0.05em;
+      color: #FFFFFF;
+      display: flex;
+      align-items: baseline;
+    }
+    .sq-dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background: var(--cesic-emerald-bright);
+      margin: 0 2px;
+    }
+    .sidebar-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #94A3B8;
+      margin-top: 2px;
+    }
+
+    .nav-list {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #FFFFFF;
+    }
+    .nav-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--cesic-emerald-bright);
+      font-variant-numeric: tabular-nums;
+    }
+    .sidebar-footer {
+      padding-top: 20px;
+      border-top: 1px solid var(--cesic-border-dark);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: #64748B;
+      font-variant-numeric: tabular-nums;
+    }
+    .sidebar-footer a {
+      color: var(--cesic-emerald-luminous);
+      text-decoration: none;
+    }
+
+    /* Main Content Column */
+    .main-content {
+      max-width: 1320px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 48px 96px 48px;
+    }
+    @media (max-width: 768px) {
+      .main-content { padding: 0 20px 64px 20px; }
+    }
+
+    /* Top Cover Plate (Speedrun Page 1 + IBM Hero) */
+    .cover-hero {
+      margin-top: 36px;
+      background: var(--cesic-surface-obsidian);
+      background-image:
+        radial-gradient(circle at 82% 22%, rgba(16, 185, 129, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 18% 80%, rgba(2, 132, 199, 0.14) 0%, transparent 50%),
+        linear-gradient(to right, rgba(30, 41, 59, 0.35) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 41, 59, 0.35) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+      border-radius: 24px;
+      padding: 56px;
+      color: #F8FAFC;
+      border: 1px solid var(--cesic-border-dark);
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .cover-hero { grid-template-columns: 1fr; padding: 32px 24px; }
+    }
+    .cover-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cesic-emerald-luminous);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      padding: 5px 12px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .cover-title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.2vw, 54px);
+      font-weight: 900;
+      letter-spacing: -0.045em;
+      line-height: 1.04;
+      margin-bottom: 18px;
+    }
+    .cover-lead {
+      font-size: 16px;
+      color: #94A3B8;
+      max-width: 600px;
+      line-height: 1.65;
+      margin-bottom: 28px;
+    }
+    .cover-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(148, 163, 184, 0.16);
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: #CBD5E1;
+      font-variant-numeric: tabular-nums;
+    }
+    .cover-symbol-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 20px;
+      padding: 36px;
+      position: relative;
+    }
+
+    /* Editorial Section Structure (Twitch Speedrun 2-column + IBM grid) */
+    .brand-section {
+      padding-top: 72px;
+      margin-top: 72px;
+      border-top: 1px solid var(--cesic-border);
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 44px;
+      align-items: start;
+    }
+    @media (max-width: 1100px) {
+      .brand-section { grid-template-columns: 1fr; gap: 24px; }
+    }
+    .sec-meta {
+      position: sticky;
+      top: 32px;
+    }
+    @media (max-width: 1100px) {
+      .sec-meta { position: static; }
+    }
+    .sec-index {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--cesic-emerald-core);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+      font-variant-numeric: tabular-nums;
+    }
+    .sec-heading {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--cesic-surface-slate);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .sec-copy {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.65;
+    }
+    .sec-copy p + p {
+      margin-top: 12px;
+    }
+    .sec-callout {
+      margin-top: 18px;
+      padding: 14px 16px;
+      background: #FFFFFF;
+      border: 1px solid var(--cesic-border);
+      border-left: 3px solid var(--cesic-emerald-core);
+      border-radius: 8px;
+      font-size: 12.5px;
+      color: #334155;
+    }
+
+    /* Visual Plates (Right column) */
+    .plates-col {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .plate {
+      background: #FFFFFF;
+      border: 1px solid var(--cesic-border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .plate-header {
+      padding: 14px 22px;
+      background: #FAFAFA;
+      border-bottom: 1px solid var(--cesic-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      color: #64748B;
+      font-variant-numeric: tabular-nums;
+    }
+    .plate-header strong {
+      color: var(--cesic-surface-slate);
+      font-weight: 600;
+    }
+    .plate-body {
+      padding: 32px;
+    }
+    .plate-body.dark-canvas {
+      background: var(--cesic-surface-obsidian);
+      color: #F8FAFC;
+    }
+    .plate-body.grid-canvas {
+      background-color: #FAFAFA;
+      background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+      background-size: 16px 16px;
+    }
+
+    /* Grid Helpers */
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    @media (max-width: 860px) {
+      .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; }
+    }
+
+    /* Architectural Wordmark Classes */
+    .arch-wm {
+      font-family: var(--font-display);
+      font-weight: 900;
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+      display: inline-flex;
+      align-items: baseline;
+      user-select: none;
+    }
+    .arch-wm .dot {
+      display: inline-block;
+      width: 0.165em;
+      height: 0.165em;
+      margin: 0 0.04em;
+    }
+
+    /* Swatch Cards (Twitch Page 5 Tall Style + IBM Carbon Values) */
+    .swatch-tall {
+      border-radius: 16px;
+      padding: 24px;
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+    .swatch-tall:hover {
+      transform: translateY(-3px);
+    }
+    .swatch-tall h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .swatch-specs {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      line-height: 1.75;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Don'ts Cards (Twitch Pages 7-9 Style) */
+    .dont-card {
+      background: #FFFFFF;
+      border: 1px solid var(--cesic-border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .dont-stage {
+      height: 170px;
+      background: #F8FAFC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--cesic-border);
+      padding: 20px;
+    }
+    .dont-caption {
+      padding: 12px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #B91C1C;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dont-x {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      background: #FEE2E2;
+      color: #DC2626;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-weight: 800;
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    /* Buttons */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 7px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--cesic-border);
+      background: #FFFFFF;
+      color: var(--cesic-surface-slate);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .btn-action:hover {
+      border-color: var(--cesic-emerald-core);
+      color: var(--cesic-emerald-core);
+    }
+    .btn-action:active {
+      transform: scale(0.98);
+    }
+    .btn-primary {
+      background: var(--cesic-surface-slate);
+      color: #FFFFFF;
+      border-color: var(--cesic-surface-slate);
+    }
+    .btn-primary:hover {
+      background: var(--cesic-emerald-core);
+      border-color: var(--cesic-emerald-core);
+      color: #FFFFFF;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--cesic-surface-obsidian);
+      color: #F8FAFC;
+      border: 1px solid var(--cesic-emerald-bright);
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 100;
+    }
+    #toast.visible { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<div id="toast">Copiado para a área de transferência!</div>
+
+<div class="app-shell">
+
+  <!-- LEFT STICKY SIDEBAR -->
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-brand">
+        <div style="width:38px;height:38px;flex-shrink:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+        </div>
+        <div>
+          <div class="sidebar-title">CESIC<span class="sq-dot"></span>BRAND</div>
+          <div class="sidebar-sub">Design Language v1.0</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#sec-manifesto"><span class="nav-num">01</span> Manifesto &amp; Origem</a></li>
+          <li><a class="nav-link" href="#sec-overview"><span class="nav-num">02</span> Visão Geral (Overview)</a></li>
+          <li><a class="nav-link" href="#sec-construction"><span class="nav-num">03</span> Grid 4D &amp; Clearspace</a></li>
+          <li><a class="nav-link" href="#sec-suite"><span class="nav-num">04</span> Suíte de Produtos &amp; Lockups</a></li>
+          <li><a class="nav-link" href="#sec-palette"><span class="nav-num">05</span> Core Palette &amp; Tokens</a></li>
+          <li><a class="nav-link" href="#sec-matrix"><span class="nav-num">06</span> Matriz de Contraste 3×3</a></li>
+          <li><a class="nav-link" href="#sec-typography"><span class="nav-num">07</span> Sistema Tipográfico</a></li>
+          <li><a class="nav-link" href="#sec-donts"><span class="nav-num">08</span> Usos Incorretos (Don'ts)</a></li>
+          <li><a class="nav-link" href="#sec-scale"><span class="nav-num">09</span> Escala Extrema (16px–512px)</a></li>
+          <li><a class="nav-link" href="#sec-downloads"><span class="nav-num">10</span> Central de Assets (33 SVGs)</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div>ORG: <a href="https://github.com/CESIC-Tecnologias" target="_blank" rel="noreferrer">CESIC-Tecnologias</a></div>
+      <div style="margin-top:4px;">SSOT: c:cesiccesic-brand</div>
+      <div style="margin-top:4px;color:#10B981;">STATUS: OFFICIAL RELEASE</div>
+    </div>
+  </aside>
+
+  <!-- RIGHT MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- HERO COVER -->
+    <header class="cover-hero">
+      <div>
+        <div class="cover-kicker">
+          <span>CESIC DESIGN LANGUAGE // MULTINATIONAL STANDARD</span>
+        </div>
+        <h1 class="cover-title">
+          O Hipercubo 4D &amp;<br/>O Centro de Inteligência.
+        </h1>
+        <p class="cover-lead">
+          Manual global de engenharia visual da <strong>CESIC Tecnologias</strong> (<em>Centro de Software de Inteligência e Inovação em Computação</em>) e de sua suíte proprietária: <strong>GastroCore</strong>, <strong>Deskcomm</strong>, <strong>Antigravity Mobile Orbit</strong> e <strong>CESIC Residency Lab</strong>.
+        </p>
+        <div class="cover-meta-row">
+          <span>VERSÃO: <strong>1.0.0 (2026)</strong></span>
+          <span>GRID MESTRE: <strong>100×100 ISOMÉTRICO (30°/60°)</strong></span>
+          <span>ASSETS: <strong>33 ARQUIVOS SVG PUROS</strong></span>
+        </div>
+      </div>
+
+      <div class="cover-symbol-stage">
+        <div style="width:176px;height:176px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+        </div>
+        <div style="margin-top:22px;text-align:center;">
+          <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">
+            CESIC<span class="dot" style="background:#10B981;"></span>TECH
+          </div>
+          <div style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;margin-top:6px;">
+            MASTER MARK • OPTION B
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================================================================== -->
+    <!-- 01. MANIFESTO & ORIGEM -->
+    <!-- ================================================================== -->
+    <section id="sec-manifesto" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">01 // THE WHY &amp; ORIGIN</span>
+        <h2 class="sec-heading">Manifesto, Origem da Sigla &amp; O "C" de Centro</h2>
+        <div class="sec-copy">
+          <p>
+            A sigla <strong>CESIC</strong> nasceu como <strong>Centro de Software de Inteligência e Inovação em Computação</strong>. O primeiro <strong>"C"</strong> carrega a palavra-chave de toda a nossa arquitetura: <strong>Centro</strong>.
+          </p>
+          <p>
+            Não criamos tecnologia por vaidade acadêmica; construímos o <strong>Hub Central</strong> de engenharia aplicada que elimina burocracias e multiplica a margem operacional de empresas reais.
+          </p>
+        </div>
+        <div class="sec-callout">
+          <strong>Metáfora Geométrica:</strong> O símbolo oficial une a projeção isométrica de um <strong>Hipercubo 4D (Tesseract)</strong> com o ponto de singularidade central em <code>(50, 50.2)</code> — o Hub onde convergem Software House, SaaS B2B e Inteligência Artificial.
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>DECOMPOSIÇÃO SEMÂNTICA DA SIGLA CESIC</strong>
+            <span>ACRONYM ARCHITECTURE</span>
+          </div>
+          <div class="plate-body">
+            <div class="grid-5">
+              <div style="padding:16px;border:1px solid #E4E4E7;border-radius:12px;background:#FAFAFA;">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#059669;">C</div>
+                <div style="font-weight:700;font-size:14px;margin-top:4px;">Centro</div>
+                <div style="font-size:12px;color:#64748B;margin-top:4px;">O Hub gravitacional no coração do Hipercubo 4D.</div>
+              </div>
+              <div style="padding:16px;border:1px solid #E4E4E7;border-radius:12px;background:#FAFAFA;">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#0F172A;">E</div>
+                <div style="font-weight:700;font-size:14px;margin-top:4px;">Engenharia &amp;</div>
+                <div style="font-size:12px;color:#64748B;margin-top:4px;">Fundações determinísticas de missão crítica.</div>
+              </div>
+              <div style="padding:16px;border:1px solid #E4E4E7;border-radius:12px;background:#FAFAFA;">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#0F172A;">S</div>
+                <div style="font-weight:700;font-size:14px;margin-top:4px;">Software de</div>
+                <div style="font-size:12px;color:#64748B;margin-top:4px;">Plataformas SaaS verticais e sistemas sob medida.</div>
+              </div>
+              <div style="padding:16px;border:1px solid #E4E4E7;border-radius:12px;background:#FAFAFA;">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#0284C7;">I</div>
+                <div style="font-weight:700;font-size:14px;margin-top:4px;">Inteligência &amp; Inovação</div>
+                <div style="font-size:12px;color:#64748B;margin-top:4px;">Agentes autônomos e P&amp;D aplicado (Residency Lab).</div>
+              </div>
+              <div style="padding:16px;border:1px solid #E4E4E7;border-radius:12px;background:#FAFAFA;">
+                <div style="font-family:var(--font-display);font-weight:900;font-size:32px;color:#0F172A;">C</div>
+                <div style="font-weight:700;font-size:14px;margin-top:4px;">Computação</div>
+                <div style="font-size:12px;color:#64748B;margin-top:4px;">Performance extrema em Rust, Cloud e Web moderna.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 02. OVERVIEW (TWITCH SPEEDRUN PAGE 3 STYLE) -->
+    <!-- ================================================================== -->
+    <section id="sec-overview" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">02 // SYSTEM OVERVIEW</span>
+        <h2 class="sec-heading">As 3 Expressões Oficiais da Marca</h2>
+        <div class="sec-copy">
+          <p>
+            Assim como nas diretrizes globais das Big Techs, a identidade da CESIC opera através de três ativos modulares que se adaptam a qualquer escala ou ponto de contato:
+          </p>
+          <p>
+            <strong>1. Símbolo 4D (The Hypercube Mark):</strong> A expressão mais rápida e icônica da CESIC sem precisar soletrar o nome.
+          </p>
+          <p>
+            <strong>2. Wordmark Arquitetural em Linha:</strong> Nossa assinatura tipográfica de alto impacto com o Ponto Quadrado de Engenharia na linha de base.
+          </p>
+          <p>
+            <strong>3. Lockup Institucional:</strong> A combinação equilibrada do Símbolo 4D com a tipografia corporativa.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <!-- 1. The Hypercube Mark -->
+        <div class="plate">
+          <div class="plate-header">
+            <strong>02.1 • SÍMBOLO MESTRE 4D (THE HYPERCUBE MARK)</strong>
+            <span>PRIMARY ICONIC MARK</span>
+          </div>
+          <div class="plate-body grid-2" style="padding:0;">
+            <div style="padding:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#FAFAFA;border-right:1px solid #E4E4E7;">
+              <div style="width:136px;height:136px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;margin-top:16px;">LIGHT EDITORIAL MODE (#FAFAFA)</span>
+            </div>
+            <div style="padding:40px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#090D16;">
+              <div style="width:136px;height:136px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;margin-top:16px;">INFRASTRUCTURE DARK MODE (#090D16)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Architectural Wordmark -->
+        <div class="plate">
+          <div class="plate-header">
+            <strong>02.2 • WORDMARK ARQUITETURAL EM LINHA (INLINE MONUMENTAL WORDMARK)</strong>
+            <span>TRACKING -0.06EM + SQUARE PERIOD</span>
+          </div>
+          <div class="plate-body grid-2" style="padding:0;">
+            <div style="padding:44px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#FFFFFF;border-right:1px solid #E4E4E7;">
+              <div class="arch-wm" style="font-size:52px;color:#0F172A;">
+                CESIC<span class="dot" style="background:#059669;"></span>TECH
+              </div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;margin-top:14px;">WORDMARK LIGHT • PONTO ESMERALDA #059669</span>
+            </div>
+            <div style="padding:44px 32px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#090D16;">
+              <div class="arch-wm" style="font-size:52px;color:#F8FAFC;">
+                CESIC<span class="dot" style="background:#10B981;"></span>LABS
+              </div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;margin-top:14px;">WORDMARK DARK • PONTO ESMERALDA #10B981</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Institutional Lockup -->
+        <div class="plate">
+          <div class="plate-header">
+            <strong>02.3 • LOCKUP INSTITUCIONAL HORIZONTAL</strong>
+            <span>CORPORATE SIGN-OFF</span>
+          </div>
+          <div class="plate-body grid-2" style="padding:0;">
+            <div style="padding:36px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-right:1px solid #E4E4E7;">
+              <div style="width:100%;max-width:380px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Tecnologias • Engineering & AI — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC</text>
+  <rect x="231.5" y="44" width="8" height="8" fill="#059669"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
+</svg></div>
+            </div>
+            <div style="padding:36px;display:flex;align-items:center;justify-content:center;background:#090D16;">
+              <div style="width:100%;max-width:380px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Tecnologias • Engineering & AI — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC</text>
+  <rect x="231.5" y="44" width="8" height="8" fill="#10B981"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
+</svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 03. GRID CONSTRUTIVO MATEMÁTICO & CLEARSPACE -->
+    <!-- ================================================================== -->
+    <section id="sec-construction" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">03 // GEOMETRY &amp; CLEARSPACE</span>
+        <h2 class="sec-heading">Grid Construtivo 4D &amp; Zona de Proteção (X)</h2>
+        <div class="sec-copy">
+          <p>
+            O Hipercubo da CESIC nunca é desenhado a olho livre. Ele obedece a uma matriz ortogonal e isométrica de <code>100×100</code> unidades com ângulos de <code>30°</code> e <code>60°</code>, canais negativos de <code>3.5u</code> e raio central de <code>r = 5u</code>.
+          </p>
+          <p>
+            <strong>Regra de Clearspace:</strong> A margem mínima ao redor do símbolo é de <code>1/2 X</code> (onde <code>X</code> é a largura da câmara central). Nas wordmarks em linha, a margem mínima é de <code>2X</code> (onde <code>X</code> é o lado do Ponto Quadrado).
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>BLUEPRINT MATEMÁTICO (VIEWBOX 0 0 100 100) &amp; CLEARSPACE</strong>
+            <span>ISOMETRIC 30° / 60° PRECISION</span>
+          </div>
+          <div class="plate-body grid-2">
+            <!-- Construction Blueprint SVG -->
+            <div style="background:#090D16;border-radius:14px;padding:28px;display:flex;flex-direction:column;align-items:center;">
+              <svg width="260" height="260" viewBox="0 0 120 120" fill="none">
+                <!-- Outer Grid Box -->
+                <rect x="10" y="10" width="100" height="100" stroke="#1E293B" stroke-width="0.75"/>
+                <!-- Construction Guides -->
+                <line x1="60" y1="5" x2="60" y2="115" stroke="#0EA5E9" stroke-width="0.5" stroke-dasharray="2 2"/>
+                <line x1="5" y1="60.2" x2="115" y2="60.2" stroke="#0EA5E9" stroke-width="0.5" stroke-dasharray="2 2"/>
+                <line x1="15" y1="34" x2="105" y2="86" stroke="#EC4899" stroke-width="0.5" stroke-dasharray="2 2"/>
+                <line x1="15" y1="86" x2="105" y2="34" stroke="#EC4899" stroke-width="0.5" stroke-dasharray="2 2"/>
+                <!-- Translated Symbol at (+10, +10) -->
+                <g transform="translate(10, 10)">
+                  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399" fill-opacity="0.88" stroke="#A7F3D0" stroke-width="0.6"/>
+                  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669" fill-opacity="0.88" stroke="#A7F3D0" stroke-width="0.6"/>
+                  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9" fill-opacity="0.88" stroke="#BAE6FD" stroke-width="0.6"/>
+                  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16" stroke="#F43F5E" stroke-width="0.7" stroke-dasharray="1.5 1.5"/>
+                  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+                  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+                  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+                  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC" stroke="#EC4899" stroke-width="0.8"/>
+                </g>
+                <!-- Coordinate Callouts -->
+                <text x="63" y="18" fill="#38BDF8" font-family="monospace" font-size="4.5">(50, 10)</text>
+                <text x="64" y="59" fill="#F43F5E" font-family="monospace" font-size="4.5">HUB r=5</text>
+                <text x="14" y="106" fill="#94A3B8" font-family="monospace" font-size="4.5">GAP = 3.5u</text>
+              </svg>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;margin-top:10px;">GEOMETRIA DE COORDENADAS EXATAS</span>
+            </div>
+
+            <!-- Clearspace Diagram (Twitch Page 3 Right Column Style) -->
+            <div style="background:#F8FAFC;border:1px solid #E4E4E7;border-radius:14px;padding:28px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+              <svg width="260" height="260" viewBox="0 0 160 160" fill="none">
+                <!-- Clearspace Outer Boundary -->
+                <rect x="15" y="15" width="130" height="130" fill="rgba(5, 150, 105, 0.06)" stroke="#059669" stroke-width="1" stroke-dasharray="4 3"/>
+                <rect x="35" y="35" width="90" height="90" fill="#FFFFFF" stroke="#94A3B8" stroke-width="0.75"/>
+                <!-- Corner X markers -->
+                <text x="21" y="28" fill="#059669" font-family="monospace" font-weight="700" font-size="8">1/2 X</text>
+                <text x="118" y="28" fill="#059669" font-family="monospace" font-weight="700" font-size="8">1/2 X</text>
+                <text x="21" y="138" fill="#059669" font-family="monospace" font-weight="700" font-size="8">1/2 X</text>
+                <text x="118" y="138" fill="#059669" font-family="monospace" font-weight="700" font-size="8">1/2 X</text>
+                <g transform="translate(30, 30)">
+                  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+                  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+                  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+                  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FFFFFF"/>
+                  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+                  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+                  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+                  <circle cx="50" cy="50.2" r="5" fill="#FFFFFF"/>
+                </g>
+              </svg>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#475569;margin-top:10px;">ZONA DE SEGURANÇA MÍNIMA (CLEARSPACE 1/2 X)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 04. SUÍTE DE PRODUTOS & PARTNERSHIP LOCKUPS (TWITCH PAGE 4 STYLE) -->
+    <!-- ================================================================== -->
+    <section id="sec-suite" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">04 // PRODUCT SUITE &amp; CO-BRANDING</span>
+        <h2 class="sec-heading">Suíte Oficial de Produtos &amp; Lockups de Parceria</h2>
+        <div class="sec-copy">
+          <p>
+            A CESIC opera sob o <strong>Sistema 2 (Suíte de Produtos)</strong>: a holding e o Residency Lab ostentam o Hipercubo B integral, enquanto cada plataforma de software possui seu ícone geométrico próprio construído na mesma grade e compartilhando o mesmo <strong>Cubo 4D + Hub Central</strong>.
+          </p>
+          <p>
+            Em parcerias estratégicas (como <strong>APONTI</strong> e <strong>Bondegusto</strong>), o espaçamento entre marcas obedece à regra <code>2X | X | 2X</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <!-- 5 Product Matrix -->
+        <div class="plate">
+          <div class="plate-header">
+            <strong>04.1 • MATRIZ DA FAMÍLIA DE MARCAS (LIGHT &amp; DARK + INLINE WORDMARKS)</strong>
+            <span>5 OFFICIAL VERTICALS</span>
+          </div>
+          <div class="plate-body" style="padding:0;">
+            <div class="grid-5" style="gap:0;">
+              <!-- 1. CESIC TECH -->
+              <div style="border-right:1px solid #E4E4E7;">
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:82px;height:82px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+                </div>
+                <div style="height:130px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:74px;height:74px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+                </div>
+                <div style="padding:16px;">
+                  <div style="font-family:var(--font-mono);font-size:10px;color:#64748B;">01 • HOLDING</div>
+                  <div class="arch-wm" style="font-size:19px;color:#0F172A;margin-top:4px;">CESIC<span class="dot" style="background:#059669;"></span>TECH</div>
+                  <div style="font-size:11.5px;color:#475569;margin-top:6px;">Hipercubo B Mestre</div>
+                </div>
+              </div>
+
+              <!-- 2. GASTROCORE -->
+              <div style="border-right:1px solid #E4E4E7;">
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:82px;height:82px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>GastroCore by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#047857"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#F59E0B"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#059669"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#EA580C"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+                </div>
+                <div style="height:130px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:74px;height:74px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>GastroCore by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#FBBF24"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#F97316"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+                </div>
+                <div style="padding:16px;">
+                  <div style="font-family:var(--font-mono);font-size:10px;color:#EA580C;">02 • UAN &amp; FOOD ERP</div>
+                  <div class="arch-wm" style="font-size:19px;color:#0F172A;margin-top:4px;">GASTRO<span class="dot" style="background:#EA580C;"></span>CORE</div>
+                  <div style="font-size:11.5px;color:#475569;margin-top:6px;">"G" Isométrico + Core Laranja</div>
+                </div>
+              </div>
+
+              <!-- 3. DESKCOMM -->
+              <div style="border-right:1px solid #E4E4E7;">
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:82px;height:82px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Deskcomm by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0284C7"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#0284C7"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#10B981"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+                </div>
+                <div style="height:130px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:74px;height:74px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Deskcomm by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0EA5E9"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#34D399"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#38BDF8"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#34D399"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+                </div>
+                <div style="padding:16px;">
+                  <div style="font-family:var(--font-mono);font-size:10px;color:#0284C7;">03 • AI AGENTS CRM</div>
+                  <div class="arch-wm" style="font-size:19px;color:#0F172A;margin-top:4px;">DESK<span class="dot" style="background:#0284C7;"></span>COMM</div>
+                  <div style="font-size:11.5px;color:#475569;margin-top:6px;">Cubo Diálogo + Core B</div>
+                </div>
+              </div>
+
+              <!-- 4. MOBILE ORBIT -->
+              <div style="border-right:1px solid #E4E4E7;">
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:82px;height:82px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Antigravity Mobile Orbit by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#0F172A" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#10B981"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#10B981"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#0284C7"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#FAFAFA"/>
+</svg></div>
+                </div>
+                <div style="height:130px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:74px;height:74px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Antigravity Mobile Orbit by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#F8FAFC" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#34D399"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#34D399"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#38BDF8"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
+</svg></div>
+                </div>
+                <div style="padding:16px;">
+                  <div style="font-family:var(--font-mono);font-size:10px;color:#059669;">04 • DEVTOOLS OSS</div>
+                  <div class="arch-wm" style="font-size:19px;color:#0F172A;margin-top:4px;">MOBILE<span class="dot" style="background:#059669;"></span>ORBIT</div>
+                  <div style="font-size:11.5px;color:#475569;margin-top:6px;">Órbita + Hub Branco no Dark</div>
+                </div>
+              </div>
+
+              <!-- 5. RESIDENCY LAB -->
+              <div>
+                <div style="height:140px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:82px;height:82px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Residency Lab — Division Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#0F172A"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#10B981"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+                </div>
+                <div style="height:130px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                  <div style="width:74px;height:74px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Residency Lab — Division Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#F8FAFC"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#38BDF8"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+                </div>
+                <div style="padding:16px;">
+                  <div style="font-family:var(--font-mono);font-size:10px;color:#0F172A;">05 • P&amp;D &amp; TALENTOS</div>
+                  <div class="arch-wm" style="font-size:19px;color:#0F172A;margin-top:4px;">CESIC<span class="dot" style="background:#059669;"></span>LABS</div>
+                  <div style="font-size:11.5px;color:#475569;margin-top:6px;">Edição P&amp;D Ardósia/Branco</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Partnership Lockup Plate (Twitch Page 4 Style) -->
+        <div class="plate">
+          <div class="plate-header">
+            <strong>04.2 • PARTNERSHIP &amp; INTERNAL LOCKUPS (REGRA DE ESPAÇAMENTO 2X | X | 2X)</strong>
+            <span>CO-BRANDING GEOMETRY</span>
+          </div>
+          <div class="plate-body" style="background:#FAFAFA;">
+            <div style="position:relative;padding:28px;background:#FFFFFF;border:1px solid #E4E4E7;border-radius:12px;display:flex;align-items:center;justify-content:center;gap:0;">
+              <!-- Guide lines -->
+              <div style="display:flex;align-items:center;flex-wrap:wrap;justify-content:center;">
+                <span class="arch-wm" style="font-size:36px;color:#0F172A;">CESIC<span class="dot" style="background:#059669;"></span>LABS</span>
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:44px;background:rgba(236,72,153,0.12);border-x:1px dashed #EC4899;font-family:var(--font-mono);font-size:10px;color:#BE185D;">2X</span>
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:#0F172A;color:#FFF;font-family:var(--font-mono);font-size:10px;font-weight:700;">×</span>
+                <span style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:44px;background:rgba(236,72,153,0.12);border-x:1px dashed #EC4899;font-family:var(--font-mono);font-size:10px;color:#BE185D;">2X</span>
+                <span style="font-family:var(--font-display);font-weight:800;font-size:34px;letter-spacing:-0.04em;color:#059669;">APONTI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 05. CORE PALETTE & TOKENS (TWITCH PAGE 5 + IBM CARBON) -->
+    <!-- ================================================================== -->
+    <section id="sec-palette" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">05 // CORE PALETTE &amp; TOKENS</span>
+        <h2 class="sec-heading">Especificação Cromática (HEX, RGB, CMYK, PMS, OKLCH)</h2>
+        <div class="sec-copy">
+          <p>
+            Nossa paleta equilibra a sobriedade editorial do <strong>Editorial Canvas (#FAFAFA)</strong> e do <strong>Deep Slate (#0F172A)</strong> com a energia técnica do <strong>Institutional Emerald (#059669)</strong>, do <strong>Engineering Sky (#0284C7)</strong> e do calor térmico do <strong>GastroCore Amber/Orange (#F59E0B / #EA580C)</strong>.
+          </p>
+          <p>Clique em qualquer cartão para copiar o código HEX instantaneamente.</p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="grid-3">
+          <!-- Swatch 1: Institutional Emerald -->
+          <div class="swatch-tall" style="background:#059669;color:#FFFFFF;" onclick="copyText('#059669')">
+            <div>
+              <h4>Institutional Emerald</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">--cesic-emerald-core</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #059669</div>
+              <div>RGB: 5, 150, 105</div>
+              <div>CMYK: C88 M12 Y68 K2</div>
+              <div>PMS: PMS 3285 C</div>
+              <div>OKLCH: oklch(0.60 0.15 163)</div>
+            </div>
+          </div>
+
+          <!-- Swatch 2: Quantum Emerald -->
+          <div class="swatch-tall" style="background:#10B981;color:#090D16;" onclick="copyText('#10B981')">
+            <div>
+              <h4>Quantum Emerald</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;opacity:0.8;">--cesic-emerald-bright</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #10B981</div>
+              <div>RGB: 16, 185, 129</div>
+              <div>CMYK: C78 M0 Y62 K0</div>
+              <div>PMS: PMS 339 C</div>
+              <div>OKLCH: oklch(0.70 0.17 162)</div>
+            </div>
+          </div>
+
+          <!-- Swatch 3: Engineering Sky -->
+          <div class="swatch-tall" style="background:#0284C7;color:#FFFFFF;" onclick="copyText('#0284C7')">
+            <div>
+              <h4>Engineering Sky Deep</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;opacity:0.85;">--cesic-blue-core</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #0284C7</div>
+              <div>RGB: 2, 132, 199</div>
+              <div>CMYK: C86 M32 Y0 K0</div>
+              <div>PMS: PMS 2995 C</div>
+              <div>OKLCH: oklch(0.58 0.15 242)</div>
+            </div>
+          </div>
+
+          <!-- Swatch 4: Thermal Amber + Flame Orange (GastroCore) -->
+          <div class="swatch-tall" style="background:linear-gradient(155deg, #F59E0B 0%, #EA580C 100%);color:#FFFFFF;" onclick="copyText('#F59E0B / #EA580C')">
+            <div>
+              <h4>GastroCore Thermal Core</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;opacity:0.9;">--cesic-gastro-amber / orange</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #F59E0B / #EA580C</div>
+              <div>RGB: 245, 158, 11 / 234, 88, 12</div>
+              <div>CMYK: C0 M42 Y96 K0</div>
+              <div>PMS: PMS 130 C / PMS 1655 C</div>
+              <div>OKLCH: oklch(0.77 0.17 70)</div>
+            </div>
+          </div>
+
+          <!-- Swatch 5: Infrastructure Obsidian -->
+          <div class="swatch-tall" style="background:#090D16;color:#F8FAFC;" onclick="copyText('#090D16')">
+            <div>
+              <h4>Infrastructure Obsidian</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">--cesic-surface-obsidian</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #090D16 (Slate: #0F172A)</div>
+              <div>RGB: 9, 13, 22</div>
+              <div>CMYK: C90 M78 Y52 K85</div>
+              <div>PMS: PMS Black 6 C</div>
+              <div>OKLCH: oklch(0.15 0.02 264)</div>
+            </div>
+          </div>
+
+          <!-- Swatch 6: Editorial Canvas -->
+          <div class="swatch-tall" style="background:#FAFAFA;color:#0F172A;border:1.5px solid #E4E4E7;" onclick="copyText('#FAFAFA')">
+            <div>
+              <h4>Editorial Light Canvas</h4>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#64748B;">--cesic-surface-canvas</span>
+            </div>
+            <div class="swatch-specs">
+              <div>HEX: #FAFAFA (White: #FFFFFF)</div>
+              <div>RGB: 250, 250, 250</div>
+              <div>CMYK: C2 M1 Y1 K0</div>
+              <div>PMS: PMS Cool Gray 1 C</div>
+              <div>OKLCH: oklch(0.985 0 0)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 06. MATRIZ DE APLICAÇÃO 3X3 (TWITCH PAGE 6 STYLE) -->
+    <!-- ================================================================== -->
+    <section id="sec-matrix" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">06 // SURFACE MATRIX (3×3)</span>
+        <h2 class="sec-heading">Comportamento sobre Superfícies &amp; Versões Monocromáticas</h2>
+        <div class="sec-copy">
+          <p>
+            Para garantir contraste cirúrgico em qualquer mídia (interfaces web, terminais escuros, brindes gravados a laser, uniformes bordados ou notas fiscais P&amp;B), siga rigorosamente esta matriz 3×3 de aplicação.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>MATRIZ 3×3: FUNDO ESCURO (#090D16) • FUNDO CLARO (#FAFAFA) • MONOCROMÁTICO</strong>
+            <span>CONTRAST GOVERNANCE</span>
+          </div>
+          <div class="plate-body">
+            <div class="grid-3">
+              <!-- Row 1: Symbols -->
+              <div style="height:170px;background:#090D16;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                <div style="width:92px;height:92px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              </div>
+              <div style="height:170px;background:#FAFAFA;border:1px solid #E4E4E7;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                <div style="width:92px;height:92px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+              </div>
+              <div style="height:170px;background:#059669;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:20px;">
+                <div style="width:76px;height:76px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Monochrome Mark (Pure White)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#FFFFFF"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#FFFFFF"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#FFFFFF"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,48.5 35,41.6" fill="#FFFFFF"/>
+  <polygon points="34,43.5 48.5,51.2 48.5,67.4 34,58.8" fill="#FFFFFF"/>
+  <polygon points="66,43.5 66,58.8 51.5,67.4 51.5,51.2" fill="#FFFFFF"/>
+  <circle cx="50" cy="50.2" r="5.5" fill="#090D16"/>
+</svg></div>
+              </div>
+
+              <!-- Row 2: Inline Wordmarks -->
+              <div style="height:150px;background:#090D16;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                <div class="arch-wm" style="font-size:32px;color:#F8FAFC;">CESIC<span class="dot" style="background:#10B981;"></span>TECH</div>
+              </div>
+              <div style="height:150px;background:#FAFAFA;border:1px solid #E4E4E7;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                <div class="arch-wm" style="font-size:32px;color:#0F172A;">CESIC<span class="dot" style="background:#059669;"></span>TECH</div>
+              </div>
+              <div style="height:150px;background:#059669;border-radius:14px;display:flex;align-items:center;justify-content:center;">
+                <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">CESIC<span class="dot" style="background:#090D16;"></span>TECH</div>
+              </div>
+
+              <!-- Row 3: Monochrome & Product Wordmarks -->
+              <div style="height:150px;background:#090D16;border-radius:14px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;">
+                <div class="arch-wm" style="font-size:24px;color:#F8FAFC;">GASTRO<span class="dot" style="background:#F59E0B;"></span>CORE</div>
+                <div class="arch-wm" style="font-size:24px;color:#F8FAFC;">DESK<span class="dot" style="background:#38BDF8;"></span>COMM</div>
+              </div>
+              <div style="height:150px;background:#FAFAFA;border:1px solid #E4E4E7;border-radius:14px;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;">
+                <div class="arch-wm" style="font-size:24px;color:#0F172A;">MOBILE<span class="dot" style="background:#059669;"></span>ORBIT</div>
+                <div class="arch-wm" style="font-size:24px;color:#0F172A;">CESIC<span class="dot" style="background:#059669;"></span>LABS</div>
+              </div>
+              <div style="height:150px;background:#FFFFFF;border:1px solid #E4E4E7;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:16px;">
+                <div style="width:76px;height:76px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Monochrome Mark (Slate/Black)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#0F172A"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#0F172A"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0F172A"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FFFFFF"/>
+  <polygon points="50,33 65,41.6 50,48.5 35,41.6" fill="#0F172A"/>
+  <polygon points="34,43.5 48.5,51.2 48.5,67.4 34,58.8" fill="#0F172A"/>
+  <polygon points="66,43.5 66,58.8 51.5,67.4 51.5,51.2" fill="#0F172A"/>
+  <circle cx="50" cy="50.2" r="5.5" fill="#FFFFFF"/>
+</svg></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 07. SISTEMA TIPOGRÁFICO -->
+    <!-- ================================================================== -->
+    <section id="sec-typography" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">07 // TYPOGRAPHY SYSTEM</span>
+        <h2 class="sec-heading">Tríade Tipográfica de Engenharia</h2>
+        <div class="sec-copy">
+          <p>
+            Combinamos a autoridade geométrica da <strong>Plus Jakarta Sans</strong> para títulos e wordmarks, a neutralidade cirúrgica da <strong>Inter</strong> para interfaces e documentação, e a precisão tabular da <strong>JetBrains Mono</strong> para telemetria e código.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>ESPECIFICAÇÃO DE FONTES &amp; NUMERAIS TABULARES</strong>
+            <span>FONT STACK</span>
+          </div>
+          <div class="plate-body" style="display:flex;flex-direction:column;gap:24px;">
+            <div style="padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+              <div style="font-family:var(--font-mono);font-size:11px;color:#059669;">01 • DISPLAY &amp; WORDMARKS — PLUS JAKARTA SANS (800 / 900 BLACK)</div>
+              <div style="font-family:var(--font-display);font-weight:900;font-size:40px;letter-spacing:-0.05em;color:#0F172A;margin-top:6px;">
+                Engenharia Aplicada &amp; Sistemas Autônomos.
+              </div>
+            </div>
+            <div style="padding-bottom:20px;border-bottom:1px solid #E4E4E7;">
+              <div style="font-family:var(--font-mono);font-size:11px;color:#0284C7;">02 • UI &amp; EDITORIAL BODY — INTER (400 / 500 / 600)</div>
+              <div style="font-family:var(--font-sans);font-size:16px;color:#334155;margin-top:6px;max-width:720px;">
+                Construímos plataformas verticais B2B e infraestrutura de inteligência artificial que operam com latência sub-milissegundo e governança sênior auditável.
+              </div>
+            </div>
+            <div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:#EA580C;">03 • TELEMETRY &amp; TABULAR METRICS — JETBRAINS MONO (TABULAR-NUMS)</div>
+              <div style="font-family:var(--font-mono);font-size:22px;font-weight:700;color:#0F172A;margin-top:6px;font-variant-numeric:tabular-nums;">
+                SYS.LATENCY: 0.18ms // CMV_REDUCTION: -28.4% // UPTIME: 99.98%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 08. USOS INCORRETOS — DON'TS (TWITCH PAGES 7-9 STYLE) -->
+    <!-- ================================================================== -->
+    <section id="sec-donts" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">08 // BRAND PROTECTION (DON'TS)</span>
+        <h2 class="sec-heading">O Que Nunca Fazer com o Símbolo e a Wordmark</h2>
+        <div class="sec-copy">
+          <p>
+            A credibilidade de uma marca de padrão multinacional depende da consistência absoluta. Nunca distorça, rotacione, adicione efeitos amadores ou altere a relação entre o Hipercubo 4D, o Hub Central e o Ponto Quadrado de Engenharia.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="grid-3">
+          <!-- Don't 1: Stretch -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="width:120px;height:65px;">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="120" height="65">
+                  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+                  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+                  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+                  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#F8FAFC"/>
+                  <circle cx="50" cy="50.2" r="8" fill="#0F172A"/>
+                </svg>
+              </div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não achate nem estique o Hipercubo.</div>
+          </div>
+
+          <!-- Don't 2: Rotate -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="width:88px;height:88px;transform:rotate(28deg);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não rotacione o ângulo isométrico.</div>
+          </div>
+
+          <!-- Don't 3: Remove Center Hub -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+                <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#F8FAFC"/>
+                <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+                <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+                <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Nunca remova o Hub Central.</div>
+          </div>
+
+          <!-- Don't 4: Round dot instead of Square Dot -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="font-family:var(--font-display);font-weight:900;font-size:28px;letter-spacing:-0.06em;color:#0F172A;">
+                CESIC<span style="color:#059669;">•</span>LABS
+              </div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não use ponto redondo na Wordmark.</div>
+          </div>
+
+          <!-- Don't 5: Drop Shadow / Neon Glow -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="width:88px;height:88px;filter:drop-shadow(0 10px 12px rgba(236,72,153,0.75));"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não aplique sombras ou brilhos neon.</div>
+          </div>
+
+          <!-- Don't 6: Off-brand Colors -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <polygon points="50,10 83,29 50,47 17,29" fill="#EC4899"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#8B5CF6"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#EAB308"/>
+                <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#F8FAFC"/>
+                <circle cx="50" cy="50.2" r="10" fill="#EC4899"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não altere as cores institucionais.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 09. TESTE DE ESCALA EXTREMA (16PX A 512PX) -->
+    <!-- ================================================================== -->
+    <section id="sec-scale" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">09 // SCALE &amp; FAVICON STRESS TEST</span>
+        <h2 class="sec-heading">Escala de Precisão (De 16px ao Formato Monumental)</h2>
+        <div class="sec-copy">
+          <p>
+            A geometria sólida da Opção B foi desenhada para manter legibilidade total desde uma aba de navegador (<code>16×16px</code>) até empenas de prédios e estandes de eventos.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>TESTE ÓPTICO EM TAMANHO REAL (16PX • 24PX • 32PX • 48PX • 96PX • 160PX)</strong>
+            <span>OPTICAL SCALING</span>
+          </div>
+          <div class="plate-body" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-around;gap:24px;background:#090D16;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:16px;height:16px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — 16px Optical Favicon</title>
+  <polygon points="50,8 86,29 50,48 14,29" fill="#10B981"/>
+  <polygon points="12,33 47,52 47,91 12,71" fill="#059669"/>
+  <polygon points="88,33 88,71 53,91 53,52" fill="#0284C7"/>
+  <polygon points="50,28 69,39 69,61 50,72 31,61 31,39" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="6" fill="#FFFFFF"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">16px</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:24px;height:24px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">24px</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:32px;height:32px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">32px</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:48px;height:48px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">48px</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:96px;height:96px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">96px</span>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+              <div style="width:150px;height:150px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg></div>
+              <span style="font-family:var(--font-mono);font-size:11px;color:#94A3B8;">150px</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- 10. CENTRAL DE DOWNLOAD DE ASSETS (33 ARQUIVOS SVG) -->
+    <!-- ================================================================== -->
+    <section id="sec-downloads" class="brand-section">
+      <div class="sec-meta">
+        <span class="sec-index">10 // MASTER SVG ASSET VAULT</span>
+        <h2 class="sec-heading">Central de Download dos 33 SVGs Mestres</h2>
+        <div class="sec-copy">
+          <p>
+            Todos os 33 arquivos vetoriais oficiais estão disponíveis na pasta <code>assets/</code> deste repositório ou para download/cópia direta abaixo.
+          </p>
+        </div>
+      </div>
+
+      <div class="plates-col">
+        <div class="plate">
+          <div class="plate-header">
+            <strong>PACOTE COMPLETO DE SÍMBOLOS, WORDMARKS E LOCKUPS (.SVG)</strong>
+            <span>CLICK TO DOWNLOAD OR COPY SVG</span>
+          </div>
+          <div class="plate-body">
+            <div class="grid-3">
+              
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — 16px Optical Favicon</title>
+  <polygon points="50,8 86,29 50,48 14,29" fill="#10B981"/>
+  <polygon points="12,33 47,52 47,91 12,71" fill="#059669"/>
+  <polygon points="88,33 88,71 53,91 53,52" fill="#0284C7"/>
+  <polygon points="50,28 69,39 69,61 50,72 31,61 31,39" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="6" fill="#FFFFFF"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-favicon-16.svg</span>
+                      <a class="btn-action" download="cesic-favicon-16.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCUIDE2cHggT3B0aWNhbCBGYXZpY29uPC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjUwLDggODYsMjkgNTAsNDggMTQsMjkiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjEyLDMzIDQ3LDUyIDQ3LDkxIDEyLDcxIiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4OCwzMyA4OCw3MSA1Myw5MSA1Myw1MiIgZmlsbD0iIzAyODRDNyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjggNjksMzkgNjksNjEgNTAsNzIgMzEsNjEgMzEsMzkiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzhCREY4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI2IiBmaWxsPSIjRkZGRkZGIi8+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-master-dark.svg</span>
+                      <a class="btn-action" download="cesic-master-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCUIE1hc3RlciA0RCBIeXBlcmN1YmUgTWFyayAoRGFyayk8L3RpdGxlPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwRUE1RTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzhCREY4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRjhGQUZDIi8+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-master-light.svg</span>
+                      <a class="btn-action" download="cesic-master-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCUIE1hc3RlciA0RCBIeXBlcmN1YmUgTWFyayAoTGlnaHQpPC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkFGQUZBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iIzAyODRDNyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0ZBRkFGQSIvPgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Monochrome Mark (Slate/Black)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#0F172A"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#0F172A"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0F172A"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FFFFFF"/>
+  <polygon points="50,33 65,41.6 50,48.5 35,41.6" fill="#0F172A"/>
+  <polygon points="34,43.5 48.5,51.2 48.5,67.4 34,58.8" fill="#0F172A"/>
+  <polygon points="66,43.5 66,58.8 51.5,67.4 51.5,51.2" fill="#0F172A"/>
+  <circle cx="50" cy="50.2" r="5.5" fill="#FFFFFF"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-master-mono-dark.svg</span>
+                      <a class="btn-action" download="cesic-master-mono-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCUIE1vbm9jaHJvbWUgTWFyayAoU2xhdGUvQmxhY2spPC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkZGRkZGIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDQ4LjUgMzUsNDEuNiIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzQsNDMuNSA0OC41LDUxLjIgNDguNSw2Ny40IDM0LDU4LjgiIGZpbGw9IiMwRjE3MkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY2LDQzLjUgNjYsNTguOCA1MS41LDY3LjQgNTEuNSw1MS4yIiBmaWxsPSIjMEYxNzJBIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1LjUiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Monochrome Mark (Pure White)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#FFFFFF"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#FFFFFF"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#FFFFFF"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,48.5 35,41.6" fill="#FFFFFF"/>
+  <polygon points="34,43.5 48.5,51.2 48.5,67.4 34,58.8" fill="#FFFFFF"/>
+  <polygon points="66,43.5 66,58.8 51.5,67.4 51.5,51.2" fill="#FFFFFF"/>
+  <circle cx="50" cy="50.2" r="5.5" fill="#090D16"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-master-mono-light.svg</span>
+                      <a class="btn-action" download="cesic-master-mono-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCUIE1vbm9jaHJvbWUgTWFyayAoUHVyZSBXaGl0ZSk8L3RpdGxlPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiNGRkZGRkYiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiNGRkZGRkYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNDguNSAzNSw0MS42IiBmaWxsPSIjRkZGRkZGIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNCw0My41IDQ4LjUsNTEuMiA0OC41LDY3LjQgMzQsNTguOCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjYsNDMuNSA2Niw1OC44IDUxLjUsNjcuNCA1MS41LDUxLjIiIGZpbGw9IiNGRkZGRkYiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUuNSIgZmlsbD0iIzA5MEQxNiIvPgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Deskcomm by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0EA5E9"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#34D399"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#38BDF8"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#34D399"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-dark.svg</span>
+                      <a class="btn-action" download="deskcomm-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCUIFByb2R1Y3QgU3ltYm9sIChEYXJrKTwvdGl0bGU+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDkzIDMwLDgyIDE1LDkwIDE1LDcwLjUiIGZpbGw9IiMwRUE1RTkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzhCREY4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzREMzk5Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRjhGQUZDIi8+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Deskcomm by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0284C7"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#0284C7"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#10B981"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-light.svg</span>
+                      <a class="btn-action" download="deskcomm-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCUIFByb2R1Y3QgU3ltYm9sIChMaWdodCk8L3RpdGxlPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMzOEJERjgiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw5MyAzMCw4MiAxNSw5MCAxNSw3MC41IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkFGQUZBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iIzAyODRDNyIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iIzEwQjk4MSIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0ZBRkFGQSIvPgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>GastroCore by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#FBBF24"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#F97316"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-dark.svg</span>
+                      <a class="btn-action" download="gastrocore-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigJQgUHJvZHVjdCBTeW1ib2wgKERhcmspPC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSw1MS41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjMDkwRDE2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iI0ZCQkYyNCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iI0Y5NzMxNiIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0Y4RkFGQyIvPgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>GastroCore by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#047857"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#F59E0B"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#059669"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#EA580C"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-light.svg</span>
+                      <a class="btn-action" download="gastrocore-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigJQgUHJvZHVjdCBTeW1ib2wgKExpZ2h0KTwvdGl0bGU+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsNTEuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzA0Nzg1NyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiNGNTlFMEIiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiNFQTU4MEMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGQUZBRkEiLz4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Antigravity Mobile Orbit by CESIC — Product Symbol (Dark)</title>
+  <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#F8FAFC" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#34D399"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#34D399"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#38BDF8"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-dark.svg</span>
+                      <a class="btn-action" download="mobile-orbit-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+QW50aWdyYXZpdHkgTW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAlCBQcm9kdWN0IFN5bWJvbCAoRGFyayk8L3RpdGxlPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODUsMzAgODUsNzAgNTAsOTAgMTUsNzAgMTUsMzAiIHN0cm9rZT0iI0Y4RkFGQyIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iODUiIGN5PSIzMCIgcj0iOCIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzEgNjcsNDAuOCA1MCw1MC41IDMzLDQwLjgiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMzLDQwLjggNTAsNTAuNSA1MCw3MCAzMyw2MC4yIiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI2Nyw0MC44IDY3LDYwLjIgNTAsNzAgNTAsNTAuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuNSIgcj0iNS41IiBmaWxsPSIjRjhGQUZDIi8+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>Antigravity Mobile Orbit by CESIC — Product Symbol (Light)</title>
+  <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#0F172A" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#10B981"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#10B981"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#0284C7"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#FAFAFA"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-light.svg</span>
+                      <a class="btn-action" download="mobile-orbit-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+QW50aWdyYXZpdHkgTW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAlCBQcm9kdWN0IFN5bWJvbCAoTGlnaHQpPC90aXRsZT4KICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDg1LDMwIDg1LDcwIDUwLDkwIDE1LDcwIDE1LDMwIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg1IiBjeT0iMzAiIHI9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMxIDY3LDQwLjggNTAsNTAuNSAzMyw0MC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzMyw0MC44IDUwLDUwLjUgNTAsNzAgMzMsNjAuMiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjcsNDAuOCA2Nyw2MC4yIDUwLDcwIDUwLDUwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjUiIHI9IjUuNSIgZmlsbD0iI0ZBRkFGQSIvPgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Residency Lab — Division Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#F8FAFC"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#38BDF8"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-dark.svg</span>
+                      <a class="btn-action" download="residency-lab-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgUmVzaWRlbmN5IExhYiDigJQgRGl2aXNpb24gU3ltYm9sIChEYXJrKTwvdGl0bGU+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iI0Y4RkFGQyIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzOEJERjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Residency Lab — Division Symbol (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#0F172A"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#10B981"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-light.svg</span>
+                      <a class="btn-action" download="residency-lab-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgUmVzaWRlbmN5IExhYiDigJQgRGl2aXNpb24gU3ltYm9sIChMaWdodCk8L3RpdGxlPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMwRjE3MkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMDI4NEM3Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+  <title>CESIC.LABS — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">CESIC</text>
+  <rect x="226" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="248" y="74" fill="#F8FAFC" class="wm">LABS</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-labs-wordmark-dark.svg</span>
+                      <a class="btn-action" download="cesic-labs-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjI2IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjQ4IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5MQUJTPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+  <title>CESIC.LABS — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">CESIC</text>
+  <rect x="226" y="60" width="14" height="14" fill="#059669"/>
+  <text x="248" y="74" fill="#0F172A" class="wm">LABS</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-labs-wordmark-light.svg</span>
+                      <a class="btn-action" download="cesic-labs-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjIyNiIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI0OCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TEFCUzwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+  <title>CESIC.TECH — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">CESIC</text>
+  <rect x="226" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="248" y="74" fill="#F8FAFC" class="wm">TECH</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tech-wordmark-dark.svg</span>
+                      <a class="btn-action" download="cesic-tech-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjI2IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjQ4IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5URUNIPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+  <title>CESIC.TECH — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">CESIC</text>
+  <rect x="226" y="60" width="14" height="14" fill="#059669"/>
+  <text x="248" y="74" fill="#0F172A" class="wm">TECH</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tech-wordmark-light.svg</span>
+                      <a class="btn-action" download="cesic-tech-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjIyNiIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI0OCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+VEVDSDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 96" fill="none">
+  <title>DESK.COMM — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">DESK</text>
+  <rect x="184" y="60" width="14" height="14" fill="#38BDF8"/>
+  <text x="206" y="74" fill="#F8FAFC" class="wm">COMM</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">desk-comm-wordmark-dark.svg</span>
+                      <a class="btn-action" download="desk-comm-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5ERVNLPC90ZXh0PgogIDxyZWN0IHg9IjE4NCIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzM4QkRGOCIvPgogIDx0ZXh0IHg9IjIwNiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q09NTTwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 96" fill="none">
+  <title>DESK.COMM — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">DESK</text>
+  <rect x="184" y="60" width="14" height="14" fill="#0284C7"/>
+  <text x="206" y="74" fill="#0F172A" class="wm">COMM</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">desk-comm-wordmark-light.svg</span>
+                      <a class="btn-action" download="desk-comm-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+REVTSzwvdGV4dD4KICA8cmVjdCB4PSIxODQiIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiMwMjg0QzciLz4KICA8dGV4dCB4PSIyMDYiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNPTU08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 96" fill="none">
+  <title>GASTRO.CORE — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">GASTRO</text>
+  <rect x="267" y="60" width="14" height="14" fill="#F59E0B"/>
+  <text x="289" y="74" fill="#F8FAFC" class="wm">CORE</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastro-core-wordmark-dark.svg</span>
+                      <a class="btn-action" download="gastro-core-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkdBU1RSTzwvdGV4dD4KICA8cmVjdCB4PSIyNjciIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiNGNTlFMEIiLz4KICA8dGV4dCB4PSIyODkiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkNPUkU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 96" fill="none">
+  <title>GASTRO.CORE — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">GASTRO</text>
+  <rect x="267" y="60" width="14" height="14" fill="#EA580C"/>
+  <text x="289" y="74" fill="#0F172A" class="wm">CORE</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastro-core-wordmark-light.svg</span>
+                      <a class="btn-action" download="gastro-core-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5HQVNUUk88L3RleHQ+CiAgPHJlY3QgeD0iMjY3IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjRUE1ODBDIi8+CiAgPHRleHQgeD0iMjg5IiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5DT1JFPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 96" fill="none">
+  <title>MOBILE.ORBIT — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">MOBILE</text>
+  <rect x="267" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="289" y="74" fill="#F8FAFC" class="wm">ORBIT</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-wordmark-dark.svg</span>
+                      <a class="btn-action" download="mobile-orbit-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5NT0JJTEU8L3RleHQ+CiAgPHJlY3QgeD0iMjY3IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjg5IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5PUkJJVDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 96" fill="none">
+  <title>MOBILE.ORBIT — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">MOBILE</text>
+  <rect x="267" y="60" width="14" height="14" fill="#059669"/>
+  <text x="289" y="74" fill="#0F172A" class="wm">ORBIT</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-wordmark-light.svg</span>
+                      <a class="btn-action" download="mobile-orbit-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TU9CSUxFPC90ZXh0PgogIDxyZWN0IHg9IjI2NyIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI4OSIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+T1JCSVQ8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Tecnologias • Engineering & AI — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0EA5E9"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC</text>
+  <rect x="231.5" y="44" width="8" height="8" fill="#10B981"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tecnologias-lockup-dark.svg</span>
+                      <a class="btn-action" download="cesic-tecnologias-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwRUE1RTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzhCREY4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5DRVNJQzwvdGV4dD4KICA8cmVjdCB4PSIyMzEuNSIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5UZWNub2xvZ2lhcyDigKIgRW5naW5lZXJpbmcgJiBBSTwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Tecnologias • Engineering & AI — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC</text>
+  <rect x="231.5" y="44" width="8" height="8" fill="#059669"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tecnologias-lockup-light.svg</span>
+                      <a class="btn-action" download="cesic-tecnologias-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkFGQUZBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iIzAyODRDNyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjMxLjUiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+VGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUk8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>Deskcomm by CESIC • Autonomous AI CRM — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0EA5E9"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#34D399"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#38BDF8"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#34D399"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">Deskcomm</text>
+  <rect x="302" y="44" width="8" height="8" fill="#38BDF8"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Autonomous AI CRM</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-lockup-dark.svg</span>
+                      <a class="btn-action" download="deskcomm-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzhCREY4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsOTMgMzAsODIgMTUsOTAgMTUsNzAuNSIgZmlsbD0iIzBFQTVFOSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzOEJERjgiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzNEQzOTkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkRlc2tjb21tPC90ZXh0PgogIDxyZWN0IHg9IjMwMiIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzOEJERjgiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgQXV0b25vbW91cyBBSSBDUk08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>Deskcomm by CESIC • Autonomous AI CRM — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#38BDF8"/>
+  <polygon points="15,32.5 48,51.5 48,93 30,82 15,90 15,70.5" fill="#0284C7"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#0284C7"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#10B981"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">Deskcomm</text>
+  <rect x="302" y="44" width="8" height="8" fill="#0284C7"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Autonomous AI CRM</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-lockup-light.svg</span>
+                      <a class="btn-action" download="deskcomm-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDkzIDMwLDgyIDE1LDkwIDE1LDcwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMTBCOTgxIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5EZXNrY29tbTwvdGV4dD4KICA8cmVjdCB4PSIzMDIiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>GastroCore by CESIC • Foodservice ERP — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#34D399"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#10B981"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#FBBF24"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#F97316"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">GastroCore</text>
+  <rect x="349" y="44" width="8" height="8" fill="#F59E0B"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Foodservice ERP</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-lockup-dark.svg</span>
+                      <a class="btn-action" download="gastrocore-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSw1MS41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjMDkwRDE2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iI0ZCQkYyNCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iI0Y5NzMxNiIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0Y4RkFGQyIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0ibGstbWFpbiI+R2FzdHJvQ29yZTwvdGV4dD4KICA8cmVjdCB4PSIzNDkiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjRjU5RTBCIi8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzk0QTNCOCIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEZvb2RzZXJ2aWNlIEVSUDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>GastroCore by CESIC • Foodservice ERP — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,51.5 85,70.5 52,89.5 52,51.5" fill="#047857"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#F59E0B"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#059669"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#EA580C"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">GastroCore</text>
+  <rect x="349" y="44" width="8" height="8" fill="#EA580C"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Foodservice ERP</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-lockup-light.svg</span>
+                      <a class="btn-action" download="gastrocore-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsNTEuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzA0Nzg1NyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiNGNTlFMEIiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiNFQTU4MEMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9ImxrLW1haW4iPkdhc3Ryb0NvcmU8L3RleHQ+CiAgPHJlY3QgeD0iMzQ5IiB5PSI0NCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iI0VBNTgwQyIvPgogIDx0ZXh0IHg9IjExNiIgeT0iNzYiIGZpbGw9IiM2NDc0OEIiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBGb29kc2VydmljZSBFUlA8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>Mobile Orbit by CESIC • Rust & Flutter Engine — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#F8FAFC" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#34D399"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#34D399"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#38BDF8"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">Mobile Orbit</text>
+  <rect x="396" y="44" width="8" height="8" fill="#10B981"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-lockup-dark.svg</span>
+                      <a class="btn-action" download="mobile-orbit-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODUsMzAgODUsNzAgNTAsOTAgMTUsNzAgMTUsMzAiIHN0cm9rZT0iI0Y4RkFGQyIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iODUiIGN5PSIzMCIgcj0iOCIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzEgNjcsNDAuOCA1MCw1MC41IDMzLDQwLjgiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMzLDQwLjggNTAsNTAuNSA1MCw3MCAzMyw2MC4yIiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI2Nyw0MC44IDY3LDYwLjIgNTAsNzAgNTAsNTAuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuNSIgcj0iNS41IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5Nb2JpbGUgT3JiaXQ8L3RleHQ+CiAgPHJlY3QgeD0iMzk2IiB5PSI0NCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iIzEwQjk4MSIvPgogIDx0ZXh0IHg9IjExNiIgeT0iNzYiIGZpbGw9IiM5NEEzQjgiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>Mobile Orbit by CESIC • Rust & Flutter Engine — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#0F172A" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#10B981"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#10B981"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#0284C7"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">Mobile Orbit</text>
+  <rect x="396" y="44" width="8" height="8" fill="#059669"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-lockup-light.svg</span>
+                      <a class="btn-action" download="mobile-orbit-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDg1LDMwIDg1LDcwIDUwLDkwIDE1LDcwIDE1LDMwIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg1IiBjeT0iMzAiIHI9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMxIDY3LDQwLjggNTAsNTAuNSAzMyw0MC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzMyw0MC44IDUwLDUwLjUgNTAsNzAgMzMsNjAuMiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjcsNDAuOCA2Nyw2MC4yIDUwLDcwIDUwLDUwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjUiIHI9IjUuNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+TW9iaWxlIE9yYml0PC90ZXh0PgogIDxyZWN0IHg9IjM5NiIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjNjQ3NDhCIiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgUnVzdCAmIEZsdXR0ZXIgRW5naW5lPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Lab APONTI Technological Residency — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#F8FAFC"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#38BDF8"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC Lab</text>
+  <rect x="325.5" y="44" width="8" height="8" fill="#10B981"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">APONTI Technological Residency</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-lockup-dark.svg</span>
+                      <a class="btn-action" download="residency-lab-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iI0Y4RkFGQyIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzOEJERjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkNFU0lDIExhYjwvdGV4dD4KICA8cmVjdCB4PSIzMjUuNSIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5BUE9OVEkgVGVjaG5vbG9naWNhbCBSZXNpZGVuY3k8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                    </div>
+                  </div>
+
+                  <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
+                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
+                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>CESIC Lab APONTI Technological Residency — Official Lockup (light)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 83,29 50,47 17,29" fill="#0F172A"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#10B981"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+  </g>
+  <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC Lab</text>
+  <rect x="325.5" y="44" width="8" height="8" fill="#059669"/>
+  <text x="116" y="76" fill="#64748B" class="lk-sub">APONTI Technological Residency</text>
+</svg>
+                      </div>
+                    </div>
+                    <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                      <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-lockup-light.svg</span>
+                      <a class="btn-action" download="residency-lab-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMwRjE3MkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMDI4NEM3Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5DRVNJQyBMYWI8L3RleHQ+CiAgPHJlY3QgeD0iMzI1LjUiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+QVBPTlRJIFRlY2hub2xvZ2ljYWwgUmVzaWRlbmN5PC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  function copyText(txt) {
+    navigator.clipboard?.writeText(txt);
+    const toast = document.getElementById('toast');
+    toast.textContent = 'Copiado: ' + txt;
+    toast.classList.add('visible');
+    setTimeout(() => toast.classList.remove('visible'), 1800);
+  }
+</script>
+</body>
+</html>

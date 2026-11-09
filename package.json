@@ -1,0 +1,16 @@
+{
+  "name": "@cesic/brand",
+  "version": "1.0.0",
+  "private": false,
+  "description": "CESIC Tecnologias Official Brand System, 4D Hypercube SVG Assets, Design Tokens, and Interactive Brand Book.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CESIC-Tecnologias/cesic-brand.git"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-assets.mjs",
+    "test": "node scripts/verify-brand-repo.mjs"
+  },
+  "author": "Alison Melo <CESIC Tecnologias>",
+  "license": "MIT"
+}

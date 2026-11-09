@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 96" fill="none">
+  <title>DESK.COMM — Architectural Inline Wordmark (dark)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#F8FAFC" class="wm">DESK</text>
+  <rect x="184" y="60" width="14" height="14" fill="#38BDF8"/>
+  <text x="206" y="74" fill="#F8FAFC" class="wm">COMM</text>
+</svg>

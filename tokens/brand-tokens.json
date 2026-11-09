@@ -1,0 +1,141 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "meta": {
+    "name": "CESIC Tecnologias Global Design System & Brand Tokens",
+    "version": "1.0.0",
+    "acronymOrigin": "Centro de Software de Inteligência e Inovação em Computação",
+    "organizationUrl": "https://github.com/CESIC-Tecnologias"
+  },
+  "brand": {
+    "geometry": {
+      "viewBox": "0 0 100 100",
+      "isometricAngles": ["30deg", "60deg", "120deg"],
+      "structuralGap": 3.5,
+      "centerHub": {
+        "cx": 50,
+        "cy": 50.2,
+        "r": 5
+      }
+    },
+    "colors": {
+      "emerald": {
+        "core": {
+          "name": "CESIC Institutional Emerald",
+          "hex": "#059669",
+          "rgb": "rgb(5, 150, 105)",
+          "cmyk": "C88 M12 Y68 K2",
+          "pms": "PMS 3285 C",
+          "oklch": "oklch(0.60 0.15 163)"
+        },
+        "bright": {
+          "name": "Quantum Emerald",
+          "hex": "#10B981",
+          "rgb": "rgb(16, 185, 129)",
+          "cmyk": "C78 M0 Y62 K0",
+          "pms": "PMS 339 C",
+          "oklch": "oklch(0.70 0.17 162)"
+        },
+        "luminous": {
+          "name": "Telemetry Mint",
+          "hex": "#34D399",
+          "rgb": "rgb(52, 211, 153)",
+          "cmyk": "C64 M0 Y50 K0",
+          "pms": "PMS 3385 C",
+          "oklch": "oklch(0.78 0.15 162)"
+        }
+      },
+      "engineeringBlue": {
+        "core": {
+          "name": "Engineering Sky Deep",
+          "hex": "#0284C7",
+          "rgb": "rgb(2, 132, 199)",
+          "cmyk": "C86 M32 Y0 K0",
+          "pms": "PMS 2995 C",
+          "oklch": "oklch(0.58 0.15 242)"
+        },
+        "bright": {
+          "name": "Deskcomm Cyan",
+          "hex": "#0EA5E9",
+          "rgb": "rgb(14, 165, 233)",
+          "cmyk": "C76 M16 Y0 K0",
+          "pms": "PMS 298 C",
+          "oklch": "oklch(0.68 0.16 237)"
+        },
+        "luminous": {
+          "name": "Hyperion Sky",
+          "hex": "#38BDF8",
+          "rgb": "rgb(56, 189, 248)",
+          "cmyk": "C65 M8 Y0 K0",
+          "pms": "PMS 297 C",
+          "oklch": "oklch(0.76 0.14 235)"
+        }
+      },
+      "gastrocore": {
+        "amber": {
+          "name": "Thermal Amber",
+          "hex": "#F59E0B",
+          "rgb": "rgb(245, 158, 11)",
+          "cmyk": "C0 M42 Y96 K0",
+          "pms": "PMS 130 C",
+          "oklch": "oklch(0.77 0.17 70)"
+        },
+        "orange": {
+          "name": "Industrial Flame Orange",
+          "hex": "#EA580C",
+          "rgb": "rgb(234, 88, 12)",
+          "cmyk": "C0 M75 Y98 K0",
+          "pms": "PMS 1655 C",
+          "oklch": "oklch(0.65 0.20 41)"
+        }
+      },
+      "surfaces": {
+        "editorialLight": {
+          "name": "Editorial Canvas",
+          "hex": "#FAFAFA",
+          "rgb": "rgb(250, 250, 250)",
+          "cmyk": "C2 M1 Y1 K0",
+          "pms": "PMS Cool Gray 1 C",
+          "oklch": "oklch(0.985 0 0)"
+        },
+        "pureWhite": {
+          "name": "Surgical White",
+          "hex": "#FFFFFF",
+          "rgb": "rgb(255, 255, 255)",
+          "cmyk": "C0 M0 Y0 K0",
+          "pms": "Pure White",
+          "oklch": "oklch(1 0 0)"
+        },
+        "slateDeep": {
+          "name": "Deep Slate Typography",
+          "hex": "#0F172A",
+          "rgb": "rgb(15, 23, 42)",
+          "cmyk": "C85 M72 Y45 K75",
+          "pms": "PMS 289 C",
+          "oklch": "oklch(0.21 0.03 265)"
+        },
+        "infraObsidian": {
+          "name": "Infrastructure Obsidian",
+          "hex": "#090D16",
+          "rgb": "rgb(9, 13, 22)",
+          "cmyk": "C90 M78 Y52 K85",
+          "pms": "PMS Black 6 C",
+          "oklch": "oklch(0.15 0.02 264)"
+        }
+      }
+    },
+    "typography": {
+      "display": {
+        "family": "'Plus Jakarta Sans', 'Inter', system-ui, sans-serif",
+        "wordmarkWeight": 900,
+        "wordmarkTracking": "-0.06em"
+      },
+      "sans": {
+        "family": "'Inter', system-ui, -apple-system, sans-serif"
+      },
+      "mono": {
+        "family": "'JetBrains Mono', ui-monospace, SFMono-Regular, monospace",
+        "fontVariantNumeric": "tabular-nums"
+      }
+    }
+  }
+}

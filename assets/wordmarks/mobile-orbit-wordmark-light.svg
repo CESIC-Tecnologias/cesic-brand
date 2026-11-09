@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 96" fill="none">
+  <title>MOBILE.ORBIT — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">MOBILE</text>
+  <rect x="267" y="60" width="14" height="14" fill="#059669"/>
+  <text x="289" y="74" fill="#0F172A" class="wm">ORBIT</text>
+</svg>

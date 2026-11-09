@@ -1,0 +1,39 @@
+/**
+ * CESIC Tecnologias — Official Brand Tokens (CSS Custom Properties)
+ * Repository: https://github.com/CESIC-Tecnologias/cesic-brand
+ */
+:root {
+  /* Core Brand Palette */
+  --cesic-emerald-core: #059669;
+  --cesic-emerald-bright: #10B981;
+  --cesic-emerald-luminous: #34D399;
+  --cesic-emerald-deep: #047857;
+
+  /* Engineering Blue & Deskcomm Cyan */
+  --cesic-blue-core: #0284C7;
+  --cesic-blue-bright: #0EA5E9;
+  --cesic-blue-luminous: #38BDF8;
+
+  /* GastroCore Thermal Palette */
+  --cesic-gastro-amber: #F59E0B;
+  --cesic-gastro-amber-light: #FBBF24;
+  --cesic-gastro-orange: #EA580C;
+  --cesic-gastro-orange-light: #F97316;
+
+  /* Architectural Surfaces & Borders */
+  --cesic-surface-canvas: #FAFAFA;
+  --cesic-surface-white: #FFFFFF;
+  --cesic-surface-slate: #0F172A;
+  --cesic-surface-obsidian: #090D16;
+  --cesic-border-surgical: #E4E4E7;
+  --cesic-border-dark: #1E293B;
+
+  /* Typography */
+  --cesic-font-display: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --cesic-font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --cesic-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Wordmark Ratios */
+  --cesic-wordmark-tracking: -0.06em;
+  --cesic-square-dot-size: 0.17em;
+}

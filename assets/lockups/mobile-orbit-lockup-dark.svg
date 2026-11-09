@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <title>Mobile Orbit by CESIC • Rust & Flutter Engine — Official Lockup (dark)</title>
+  <style>
+    .lk-main {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: -0.04em;
+    }
+    .lk-sub {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+  </style>
+  <g transform="translate(0, 0)">
+    <polygon points="50,10 85,30 85,70 50,90 15,70 15,30" stroke="#F8FAFC" stroke-width="8" fill="none" stroke-linejoin="round"/>
+  <circle cx="85" cy="30" r="8" fill="#34D399"/>
+  <polygon points="50,31 67,40.8 50,50.5 33,40.8" fill="#34D399"/>
+  <polygon points="33,40.8 50,50.5 50,70 33,60.2" fill="#059669"/>
+  <polygon points="67,40.8 67,60.2 50,70 50,50.5" fill="#38BDF8"/>
+  <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
+  </g>
+  <text x="114" y="54" fill="#F8FAFC" class="lk-main">Mobile Orbit</text>
+  <rect x="396" y="44" width="8" height="8" fill="#10B981"/>
+  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+</svg>

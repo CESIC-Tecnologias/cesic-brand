@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Residency Lab — Division Symbol (Dark)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#F8FAFC"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#38BDF8"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#090D16"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#34D399"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#10B981"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#38BDF8"/>
+  <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
+</svg>

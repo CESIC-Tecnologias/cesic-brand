@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 96" fill="none">
+  <title>GASTRO.CORE — Architectural Inline Wordmark (light)</title>
+  <style>
+    .wm {
+      font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 900;
+      font-size: 68px;
+      letter-spacing: -0.06em;
+    }
+  </style>
+  <text x="12" y="74" fill="#0F172A" class="wm">GASTRO</text>
+  <rect x="267" y="60" width="14" height="14" fill="#EA580C"/>
+  <text x="289" y="74" fill="#0F172A" class="wm">CORE</text>
+</svg>
