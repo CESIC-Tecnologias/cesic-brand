@@ -1085,7 +1085,7 @@ const html = `<!DOCTYPE html>
                 <div class="arch-wm" style="font-size:32px;color:#0F172A;">CESIC<span class="dot" style="background:#059669;"></span>TECH</div>
               </div>
               <div style="height:150px;background:#059669;border-radius:14px;display:flex;align-items:center;justify-content:center;">
-                <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">CESIC<span class="dot" style="background:#090D16;"></span>TECH</div>
+                <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">CESIC<span class="dot" style="background:#FFFFFF;"></span>TECH</div>
               </div>
 
               <!-- Row 3: Monochrome & Product Wordmarks -->
@@ -1353,15 +1353,19 @@ const html = `<!DOCTYPE html>
             <div class="grid-3">
               ${Object.entries(assetsMap)
                 .map(([key, svgCode]) => {
-                  const isDark = key.includes('dark') || key.includes('mono-light') || key.includes('favicon');
+                  const isMonoLight = key.includes('mono-light');
+                  const isDark = key.includes('dark') || key.includes('favicon');
+                  const bg = isMonoLight ? '#059669' : isDark ? '#090D16' : '#FAFAFA';
                   const filename = key.split('/')[1];
                   const encoded = Buffer.from(svgCode, 'utf8').toString('base64');
+                  const isSymbol = key.startsWith('symbols/');
+                  const imgStyle = isSymbol
+                    ? 'width:72px;height:72px;object-fit:contain;display:block;'
+                    : 'width:210px;height:54px;object-fit:contain;display:block;';
                   return `
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
-                    <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:${isDark ? '#090D16' : '#FAFAFA'};border-bottom:1px solid #E4E4E7;">
-                      <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        ${svgCode.replace('<svg ', '<svg style="max-height:80px;max-width:210px;width:auto;height:auto;" ')}
-                      </div>
+                    <div style="height:126px;padding:18px;display:flex;align-items:center;justify-content:center;background:${bg};border-bottom:1px solid #E4E4E7;">
+                      <img src="data:image/svg+xml;base64,${encoded}" alt="${filename}" style="${imgStyle}" />
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">${filename}</span>
