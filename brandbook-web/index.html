@@ -527,7 +527,7 @@
 
     <div class="sidebar-footer">
       <div>ORG: <a href="https://github.com/CESIC-Tecnologias" target="_blank" rel="noreferrer">CESIC-Tecnologias</a></div>
-      <div style="margin-top:4px;">SSOT: c:cesiccesic-brand</div>
+      <div style="margin-top:4px;">SSOT: c:\cesic\cesic-brand</div>
       <div style="margin-top:4px;color:#10B981;">STATUS: OFFICIAL RELEASE</div>
     </div>
   </aside>
@@ -758,8 +758,8 @@
   <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC</text>
-  <rect x="231.5" y="44" width="8" height="8" fill="#059669"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
+  <rect x="114" y="65" width="7" height="7" fill="#059669"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
 </svg></div>
             </div>
             <div style="padding:36px;display:flex;align-items:center;justify-content:center;background:#090D16;">
@@ -791,8 +791,8 @@
   <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC</text>
-  <rect x="231.5" y="44" width="8" height="8" fill="#10B981"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
+  <rect x="114" y="65" width="7" height="7" fill="#10B981"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
 </svg></div>
             </div>
           </div>
@@ -1467,6 +1467,54 @@
             </div>
             <div class="dont-caption"><span class="dont-x">X</span> Não altere as cores institucionais.</div>
           </div>
+
+          <!-- Don't 7: Photo/Pattern Masking -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <defs>
+                  <pattern id="badStripes" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                    <line x1="0" y1="0" x2="0" y2="8" stroke="#0F172A" stroke-width="4" />
+                  </pattern>
+                </defs>
+                <polygon points="50,10 83,29 50,47 17,29" fill="url(#badStripes)"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="url(#badStripes)"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="url(#badStripes)"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não preencha com fotos ou texturas.</div>
+          </div>
+
+          <!-- Don't 8: Thin Outline Only -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <polygon points="50,10 83,29 50,47 17,29" stroke="#0F172A" stroke-width="1"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" stroke="#0F172A" stroke-width="1"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" stroke="#0F172A" stroke-width="1"/>
+                <circle cx="50" cy="50.2" r="5" stroke="#0F172A" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não use contorno vazado sem preenchimento.</div>
+          </div>
+
+          <!-- Don't 9: Low-Res Blurry Raster -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="width:88px;height:88px;filter:blur(2.5px);opacity:0.75;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <title>CESIC Tecnologias — Master 4D Hypercube Mark (Light)</title>
+  <polygon points="50,10 83,29 50,47 17,29" fill="#10B981"/>
+  <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="#059669"/>
+  <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="#0284C7"/>
+  <polygon points="50,27 70,38.5 70,61.5 50,73 30,61.5 30,38.5" fill="#FAFAFA"/>
+  <polygon points="50,33 65,41.6 50,50.2 35,41.6" fill="#059669"/>
+  <polygon points="35,41.6 50,50.2 50,67.4 35,58.8" fill="#0F172A"/>
+  <polygon points="65,41.6 65,58.8 50,67.4 50,50.2" fill="#0284C7"/>
+  <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
+</svg></div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não use imagens borradas de baixa resolução.</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1889,7 +1937,7 @@
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 96" fill="none">
   <title>CESIC.LABS — Architectural Inline Wordmark (dark)</title>
   <style>
     .wm {
@@ -1900,21 +1948,21 @@
     }
   </style>
   <text x="12" y="74" fill="#F8FAFC" class="wm">CESIC</text>
-  <rect x="226" y="60" width="14" height="14" fill="#10B981"/>
-  <text x="248" y="74" fill="#F8FAFC" class="wm">LABS</text>
+  <rect x="188" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="210" y="74" fill="#F8FAFC" class="wm">LABS</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-labs-wordmark-dark.svg</span>
-                      <a class="btn-action" download="cesic-labs-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjI2IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjQ4IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5MQUJTPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="cesic-labs-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMTg4IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjEwIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5MQUJTPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 96" fill="none">
   <title>CESIC.LABS — Architectural Inline Wordmark (light)</title>
   <style>
     .wm {
@@ -1925,21 +1973,21 @@
     }
   </style>
   <text x="12" y="74" fill="#0F172A" class="wm">CESIC</text>
-  <rect x="226" y="60" width="14" height="14" fill="#059669"/>
-  <text x="248" y="74" fill="#0F172A" class="wm">LABS</text>
+  <rect x="188" y="60" width="14" height="14" fill="#059669"/>
+  <text x="210" y="74" fill="#0F172A" class="wm">LABS</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-labs-wordmark-light.svg</span>
-                      <a class="btn-action" download="cesic-labs-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjIyNiIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI0OCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TEFCUzwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="cesic-labs-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5MQUJTIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjE4OCIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjIxMCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TEFCUzwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 96" fill="none">
   <title>CESIC.TECH — Architectural Inline Wordmark (dark)</title>
   <style>
     .wm {
@@ -1950,21 +1998,21 @@
     }
   </style>
   <text x="12" y="74" fill="#F8FAFC" class="wm">CESIC</text>
-  <rect x="226" y="60" width="14" height="14" fill="#10B981"/>
-  <text x="248" y="74" fill="#F8FAFC" class="wm">TECH</text>
+  <rect x="188" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="210" y="74" fill="#F8FAFC" class="wm">TECH</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tech-wordmark-dark.svg</span>
-                      <a class="btn-action" download="cesic-tech-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjI2IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjQ4IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5URUNIPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="cesic-tech-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMTg4IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjEwIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5URUNIPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410 96" fill="none">
   <title>CESIC.TECH — Architectural Inline Wordmark (light)</title>
   <style>
     .wm {
@@ -1975,21 +2023,21 @@
     }
   </style>
   <text x="12" y="74" fill="#0F172A" class="wm">CESIC</text>
-  <rect x="226" y="60" width="14" height="14" fill="#059669"/>
-  <text x="248" y="74" fill="#0F172A" class="wm">TECH</text>
+  <rect x="188" y="60" width="14" height="14" fill="#059669"/>
+  <text x="210" y="74" fill="#0F172A" class="wm">TECH</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tech-wordmark-light.svg</span>
-                      <a class="btn-action" download="cesic-tech-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjIyNiIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI0OCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+VEVDSDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="cesic-tech-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5DRVNJQy5URUNIIOKAlCBBcmNoaXRlY3R1cmFsIElubGluZSBXb3JkbWFyayAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNFU0lDPC90ZXh0PgogIDxyZWN0IHg9IjE4OCIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjIxMCIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+VEVDSDwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 96" fill="none">
   <title>DESK.COMM — Architectural Inline Wordmark (dark)</title>
   <style>
     .wm {
@@ -2000,21 +2048,21 @@
     }
   </style>
   <text x="12" y="74" fill="#F8FAFC" class="wm">DESK</text>
-  <rect x="184" y="60" width="14" height="14" fill="#38BDF8"/>
-  <text x="206" y="74" fill="#F8FAFC" class="wm">COMM</text>
+  <rect x="186" y="60" width="14" height="14" fill="#38BDF8"/>
+  <text x="208" y="74" fill="#F8FAFC" class="wm">COMM</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">desk-comm-wordmark-dark.svg</span>
-                      <a class="btn-action" download="desk-comm-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5ERVNLPC90ZXh0PgogIDxyZWN0IHg9IjE4NCIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzM4QkRGOCIvPgogIDx0ZXh0IHg9IjIwNiIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q09NTTwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="desk-comm-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5ERVNLPC90ZXh0PgogIDxyZWN0IHg9IjE4NiIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzM4QkRGOCIvPgogIDx0ZXh0IHg9IjIwOCIgeT0iNzQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJ3bSI+Q09NTTwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 96" fill="none">
   <title>DESK.COMM — Architectural Inline Wordmark (light)</title>
   <style>
     .wm {
@@ -2025,21 +2073,21 @@
     }
   </style>
   <text x="12" y="74" fill="#0F172A" class="wm">DESK</text>
-  <rect x="184" y="60" width="14" height="14" fill="#0284C7"/>
-  <text x="206" y="74" fill="#0F172A" class="wm">COMM</text>
+  <rect x="186" y="60" width="14" height="14" fill="#0284C7"/>
+  <text x="208" y="74" fill="#0F172A" class="wm">COMM</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">desk-comm-wordmark-light.svg</span>
-                      <a class="btn-action" download="desk-comm-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+REVTSzwvdGV4dD4KICA8cmVjdCB4PSIxODQiIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiMwMjg0QzciLz4KICA8dGV4dCB4PSIyMDYiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNPTU08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="desk-comm-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NzAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5ERVNLLkNPTU0g4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+REVTSzwvdGV4dD4KICA8cmVjdCB4PSIxODYiIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiMwMjg0QzciLz4KICA8dGV4dCB4PSIyMDgiIHk9Ijc0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0id20iPkNPTU08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
   <title>GASTRO.CORE — Architectural Inline Wordmark (dark)</title>
   <style>
     .wm {
@@ -2050,21 +2098,21 @@
     }
   </style>
   <text x="12" y="74" fill="#F8FAFC" class="wm">GASTRO</text>
-  <rect x="267" y="60" width="14" height="14" fill="#F59E0B"/>
-  <text x="289" y="74" fill="#F8FAFC" class="wm">CORE</text>
+  <rect x="280" y="60" width="14" height="14" fill="#F59E0B"/>
+  <text x="302" y="74" fill="#F8FAFC" class="wm">CORE</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastro-core-wordmark-dark.svg</span>
-                      <a class="btn-action" download="gastro-core-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkdBU1RSTzwvdGV4dD4KICA8cmVjdCB4PSIyNjciIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiNGNTlFMEIiLz4KICA8dGV4dCB4PSIyODkiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkNPUkU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="gastro-core-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAud20gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogOTAwOwogICAgICBmb250LXNpemU6IDY4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNmVtOwogICAgfQogIDwvc3R5bGU+CiAgPHRleHQgeD0iMTIiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkdBU1RSTzwvdGV4dD4KICA8cmVjdCB4PSIyODAiIHk9IjYwIiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IiNGNTlFMEIiLz4KICA8dGV4dCB4PSIzMDIiIHk9Ijc0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0id20iPkNPUkU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
   <title>GASTRO.CORE — Architectural Inline Wordmark (light)</title>
   <style>
     .wm {
@@ -2075,21 +2123,21 @@
     }
   </style>
   <text x="12" y="74" fill="#0F172A" class="wm">GASTRO</text>
-  <rect x="267" y="60" width="14" height="14" fill="#EA580C"/>
-  <text x="289" y="74" fill="#0F172A" class="wm">CORE</text>
+  <rect x="280" y="60" width="14" height="14" fill="#EA580C"/>
+  <text x="302" y="74" fill="#0F172A" class="wm">CORE</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastro-core-wordmark-light.svg</span>
-                      <a class="btn-action" download="gastro-core-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NDAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5HQVNUUk88L3RleHQ+CiAgPHJlY3QgeD0iMjY3IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjRUE1ODBDIi8+CiAgPHRleHQgeD0iMjg5IiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5DT1JFPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="gastro-core-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5HQVNUUk8uQ09SRSDigJQgQXJjaGl0ZWN0dXJhbCBJbmxpbmUgV29yZG1hcmsgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5HQVNUUk88L3RleHQ+CiAgPHJlY3QgeD0iMjgwIiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjRUE1ODBDIi8+CiAgPHRleHQgeD0iMzAyIiB5PSI3NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9IndtIj5DT1JFPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#090D16;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
   <title>MOBILE.ORBIT — Architectural Inline Wordmark (dark)</title>
   <style>
     .wm {
@@ -2100,21 +2148,21 @@
     }
   </style>
   <text x="12" y="74" fill="#F8FAFC" class="wm">MOBILE</text>
-  <rect x="267" y="60" width="14" height="14" fill="#10B981"/>
-  <text x="289" y="74" fill="#F8FAFC" class="wm">ORBIT</text>
+  <rect x="264" y="60" width="14" height="14" fill="#10B981"/>
+  <text x="286" y="74" fill="#F8FAFC" class="wm">ORBIT</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-wordmark-dark.svg</span>
-                      <a class="btn-action" download="mobile-orbit-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5NT0JJTEU8L3RleHQ+CiAgPHJlY3QgeD0iMjY3IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjg5IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5PUkJJVDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="mobile-orbit-wordmark-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLndtIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDkwMDsKICAgICAgZm9udC1zaXplOiA2OHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDZlbTsKICAgIH0KICA8L3N0eWxlPgogIDx0ZXh0IHg9IjEyIiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5NT0JJTEU8L3RleHQ+CiAgPHJlY3QgeD0iMjY0IiB5PSI2MCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMjg2IiB5PSI3NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9IndtIj5PUkJJVDwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
 
                   <div style="border:1px solid #E4E4E7;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;background:#FFFFFF;">
                     <div style="height:120px;padding:18px;display:flex;align-items:center;justify-content:center;background:#FAFAFA;border-bottom:1px solid #E4E4E7;">
                       <div style="max-width:100%;max-height:84px;display:flex;align-items:center;justify-content:center;">
-                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 96" fill="none">
+                        <svg style="max-height:80px;max-width:210px;width:auto;height:auto;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" fill="none">
   <title>MOBILE.ORBIT — Architectural Inline Wordmark (light)</title>
   <style>
     .wm {
@@ -2125,14 +2173,14 @@
     }
   </style>
   <text x="12" y="74" fill="#0F172A" class="wm">MOBILE</text>
-  <rect x="267" y="60" width="14" height="14" fill="#059669"/>
-  <text x="289" y="74" fill="#0F172A" class="wm">ORBIT</text>
+  <rect x="264" y="60" width="14" height="14" fill="#059669"/>
+  <text x="286" y="74" fill="#0F172A" class="wm">ORBIT</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-wordmark-light.svg</span>
-                      <a class="btn-action" download="mobile-orbit-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NTAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TU9CSUxFPC90ZXh0PgogIDxyZWN0IHg9IjI2NyIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI4OSIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+T1JCSVQ8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="mobile-orbit-wordmark-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgOTYiIGZpbGw9Im5vbmUiPgogIDx0aXRsZT5NT0JJTEUuT1JCSVQg4oCUIEFyY2hpdGVjdHVyYWwgSW5saW5lIFdvcmRtYXJrIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC53bSB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7CiAgICAgIGZvbnQtc2l6ZTogNjhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA2ZW07CiAgICB9CiAgPC9zdHlsZT4KICA8dGV4dCB4PSIxMiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+TU9CSUxFPC90ZXh0PgogIDxyZWN0IHg9IjI2NCIgeT0iNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjI4NiIgeT0iNzQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJ3bSI+T1JCSVQ8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
@@ -2167,14 +2215,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC</text>
-  <rect x="231.5" y="44" width="8" height="8" fill="#10B981"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
+  <rect x="114" y="65" width="7" height="7" fill="#10B981"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">Tecnologias • Engineering & AI</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tecnologias-lockup-dark.svg</span>
-                      <a class="btn-action" download="cesic-tecnologias-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwRUE1RTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzhCREY4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5DRVNJQzwvdGV4dD4KICA8cmVjdCB4PSIyMzEuNSIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5UZWNub2xvZ2lhcyDigKIgRW5naW5lZXJpbmcgJiBBSTwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="cesic-tecnologias-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwRUE1RTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiMwOTBEMTYiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMzhCREY4Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5DRVNJQzwvdGV4dD4KICA8cmVjdCB4PSIxMTQiIHk9IjY1IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMTI4IiB5PSI3MyIgZmlsbD0iIzk0QTNCOCIgY2xhc3M9ImxrLXN1YiI+VGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUk8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
@@ -2209,14 +2257,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC</text>
-  <rect x="231.5" y="44" width="8" height="8" fill="#059669"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
+  <rect x="114" y="65" width="7" height="7" fill="#059669"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">Tecnologias • Engineering & AI</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">cesic-tecnologias-lockup-light.svg</span>
-                      <a class="btn-action" download="cesic-tecnologias-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkFGQUZBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iIzAyODRDNyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMjMxLjUiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+VGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUk8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="cesic-tecnologias-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgVGVjbm9sb2dpYXMg4oCiIEVuZ2luZWVyaW5nICYgQUkg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSwzMi41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjRkFGQUZBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzBGMTcyQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iIzAyODRDNyIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+Q0VTSUM8L3RleHQ+CiAgPHJlY3QgeD0iMTE0IiB5PSI2NSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iNzMiIGZpbGw9IiM2NDc0OEIiIGNsYXNzPSJsay1zdWIiPlRlY25vbG9naWFzIOKAoiBFbmdpbmVlcmluZyAmIEFJPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
@@ -2251,14 +2299,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">Deskcomm</text>
-  <rect x="302" y="44" width="8" height="8" fill="#38BDF8"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Autonomous AI CRM</text>
+  <rect x="114" y="65" width="7" height="7" fill="#38BDF8"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">by CESIC • Autonomous AI CRM</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-lockup-dark.svg</span>
-                      <a class="btn-action" download="deskcomm-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzhCREY4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsOTMgMzAsODIgMTUsOTAgMTUsNzAuNSIgZmlsbD0iIzBFQTVFOSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzOEJERjgiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzNEQzOTkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkRlc2tjb21tPC90ZXh0PgogIDxyZWN0IHg9IjMwMiIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMzOEJERjgiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgQXV0b25vbW91cyBBSSBDUk08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="deskcomm-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzhCREY4Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsOTMgMzAsODIgMTUsOTAgMTUsNzAuNSIgZmlsbD0iIzBFQTVFOSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzOEJERjgiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzNEQzOTkiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkRlc2tjb21tPC90ZXh0PgogIDxyZWN0IHg9IjExNCIgeT0iNjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiMzOEJERjgiLz4KICA8dGV4dCB4PSIxMjgiIHk9IjczIiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgQXV0b25vbW91cyBBSSBDUk08L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
@@ -2293,14 +2341,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">Deskcomm</text>
-  <rect x="302" y="44" width="8" height="8" fill="#0284C7"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Autonomous AI CRM</text>
+  <rect x="114" y="65" width="7" height="7" fill="#0284C7"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">by CESIC • Autonomous AI CRM</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">deskcomm-lockup-light.svg</span>
-                      <a class="btn-action" download="deskcomm-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDkzIDMwLDgyIDE1LDkwIDE1LDcwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMTBCOTgxIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5EZXNrY29tbTwvdGV4dD4KICA8cmVjdCB4PSIzMDIiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="deskcomm-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+RGVza2NvbW0gYnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDkzIDMwLDgyIDE1LDkwIDE1LDcwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMTBCOTgxIi8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5EZXNrY29tbTwvdGV4dD4KICA8cmVjdCB4PSIxMTQiIHk9IjY1IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjMDI4NEM3Ii8+CiAgPHRleHQgeD0iMTI4IiB5PSI3MyIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEF1dG9ub21vdXMgQUkgQ1JNPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
@@ -2335,14 +2383,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">GastroCore</text>
-  <rect x="349" y="44" width="8" height="8" fill="#F59E0B"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Foodservice ERP</text>
+  <rect x="114" y="65" width="7" height="7" fill="#F59E0B"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">by CESIC • Foodservice ERP</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-lockup-dark.svg</span>
-                      <a class="btn-action" download="gastrocore-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSw1MS41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjMDkwRDE2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iI0ZCQkYyNCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iI0Y5NzMxNiIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0Y4RkFGQyIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0ibGstbWFpbiI+R2FzdHJvQ29yZTwvdGV4dD4KICA8cmVjdCB4PSIzNDkiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjRjU5RTBCIi8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzk0QTNCOCIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEZvb2RzZXJ2aWNlIEVSUDwvdGV4dD4KPC9zdmc+">Baixar</a>
+                      <a class="btn-action" download="gastrocore-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGRhcmspPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDgzLDI5IDUwLDQ3IDE3LDI5IiBmaWxsPSIjMzREMzk5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxNSwzMi41IDQ4LDUxLjUgNDgsODkuNSAxNSw3MC41IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI4NSw1MS41IDg1LDcwLjUgNTIsODkuNSA1Miw1MS41IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwyNyA3MCwzOC41IDcwLDYxLjUgNTAsNzMgMzAsNjEuNSAzMCwzOC41IiBmaWxsPSIjMDkwRDE2Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI1MCwzMyA2NSw0MS42IDUwLDUwLjIgMzUsNDEuNiIgZmlsbD0iI0ZCQkYyNCIvPgogIDxwb2x5Z29uIHBvaW50cz0iMzUsNDEuNiA1MCw1MC4yIDUwLDY3LjQgMzUsNTguOCIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjUsNDEuNiA2NSw1OC44IDUwLDY3LjQgNTAsNTAuMiIgZmlsbD0iI0Y5NzMxNiIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuMiIgcj0iNSIgZmlsbD0iI0Y4RkFGQyIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjRjhGQUZDIiBjbGFzcz0ibGstbWFpbiI+R2FzdHJvQ29yZTwvdGV4dD4KICA8cmVjdCB4PSIxMTQiIHk9IjY1IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjRjU5RTBCIi8+CiAgPHRleHQgeD0iMTI4IiB5PSI3MyIgZmlsbD0iIzk0QTNCOCIgY2xhc3M9ImxrLXN1YiI+YnkgQ0VTSUMg4oCiIEZvb2RzZXJ2aWNlIEVSUDwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
 
@@ -2377,14 +2425,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">GastroCore</text>
-  <rect x="349" y="44" width="8" height="8" fill="#EA580C"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Foodservice ERP</text>
+  <rect x="114" y="65" width="7" height="7" fill="#EA580C"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">by CESIC • Foodservice ERP</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">gastrocore-lockup-light.svg</span>
-                      <a class="btn-action" download="gastrocore-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsNTEuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzA0Nzg1NyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiNGNTlFMEIiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiNFQTU4MEMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9ImxrLW1haW4iPkdhc3Ryb0NvcmU8L3RleHQ+CiAgPHJlY3QgeD0iMzQ5IiB5PSI0NCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iI0VBNTgwQyIvPgogIDx0ZXh0IHg9IjExNiIgeT0iNzYiIGZpbGw9IiM2NDc0OEIiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBGb29kc2VydmljZSBFUlA8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="gastrocore-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+R2FzdHJvQ29yZSBieSBDRVNJQyDigKIgRm9vZHNlcnZpY2UgRVJQIOKAlCBPZmZpY2lhbCBMb2NrdXAgKGxpZ2h0KTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iIzEwQjk4MSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsNTEuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzA0Nzg1NyIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiNGNTlFMEIiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiNFQTU4MEMiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iIzBGMTcyQSIgY2xhc3M9ImxrLW1haW4iPkdhc3Ryb0NvcmU8L3RleHQ+CiAgPHJlY3QgeD0iMTE0IiB5PSI2NSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iI0VBNTgwQyIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iNzMiIGZpbGw9IiM2NDc0OEIiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBGb29kc2VydmljZSBFUlA8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
@@ -2417,14 +2465,14 @@
   <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">Mobile Orbit</text>
-  <rect x="396" y="44" width="8" height="8" fill="#10B981"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+  <rect x="114" y="65" width="7" height="7" fill="#10B981"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-lockup-dark.svg</span>
-                      <a class="btn-action" download="mobile-orbit-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODUsMzAgODUsNzAgNTAsOTAgMTUsNzAgMTUsMzAiIHN0cm9rZT0iI0Y4RkFGQyIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iODUiIGN5PSIzMCIgcj0iOCIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzEgNjcsNDAuOCA1MCw1MC41IDMzLDQwLjgiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMzLDQwLjggNTAsNTAuNSA1MCw3MCAzMyw2MC4yIiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI2Nyw0MC44IDY3LDYwLjIgNTAsNzAgNTAsNTAuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuNSIgcj0iNS41IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5Nb2JpbGUgT3JiaXQ8L3RleHQ+CiAgPHJlY3QgeD0iMzk2IiB5PSI0NCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iIzEwQjk4MSIvPgogIDx0ZXh0IHg9IjExNiIgeT0iNzYiIGZpbGw9IiM5NEEzQjgiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="mobile-orbit-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAoZGFyayk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODUsMzAgODUsNzAgNTAsOTAgMTUsNzAgMTUsMzAiIHN0cm9rZT0iI0Y4RkFGQyIgc3Ryb2tlLXdpZHRoPSI4IiBmaWxsPSJub25lIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iODUiIGN5PSIzMCIgcj0iOCIgZmlsbD0iIzM0RDM5OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzEgNjcsNDAuOCA1MCw1MC41IDMzLDQwLjgiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjMzLDQwLjggNTAsNTAuNSA1MCw3MCAzMyw2MC4yIiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSI2Nyw0MC44IDY3LDYwLjIgNTAsNzAgNTAsNTAuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxjaXJjbGUgY3g9IjUwIiBjeT0iNTAuNSIgcj0iNS41IiBmaWxsPSIjRjhGQUZDIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiNGOEZBRkMiIGNsYXNzPSJsay1tYWluIj5Nb2JpbGUgT3JiaXQ8L3RleHQ+CiAgPHJlY3QgeD0iMTE0IiB5PSI2NSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzEwQjk4MSIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iNzMiIGZpbGw9IiM5NEEzQjgiIGNsYXNzPSJsay1zdWIiPmJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmU8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
                     </div>
                   </div>
 
@@ -2457,14 +2505,14 @@
   <circle cx="50" cy="50.5" r="5.5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">Mobile Orbit</text>
-  <rect x="396" y="44" width="8" height="8" fill="#059669"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+  <rect x="114" y="65" width="7" height="7" fill="#059669"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">mobile-orbit-lockup-light.svg</span>
-                      <a class="btn-action" download="mobile-orbit-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDg1LDMwIDg1LDcwIDUwLDkwIDE1LDcwIDE1LDMwIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg1IiBjeT0iMzAiIHI9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMxIDY3LDQwLjggNTAsNTAuNSAzMyw0MC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzMyw0MC44IDUwLDUwLjUgNTAsNzAgMzMsNjAuMiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjcsNDAuOCA2Nyw2MC4yIDUwLDcwIDUwLDUwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjUiIHI9IjUuNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+TW9iaWxlIE9yYml0PC90ZXh0PgogIDxyZWN0IHg9IjM5NiIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMwNTk2NjkiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjNjQ3NDhCIiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgUnVzdCAmIEZsdXR0ZXIgRW5naW5lPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="mobile-orbit-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+TW9iaWxlIE9yYml0IGJ5IENFU0lDIOKAoiBSdXN0ICYgRmx1dHRlciBFbmdpbmUg4oCUIE9mZmljaWFsIExvY2t1cCAobGlnaHQpPC90aXRsZT4KICA8c3R5bGU+CiAgICAubGstbWFpbiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnUGx1cyBKYWthcnRhIFNhbnMnLCAnSW50ZXInLCBzeXN0ZW0tdWksIC1hcHBsZS1zeXN0ZW0sIHNhbnMtc2VyaWY7CiAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgIGZvbnQtc2l6ZTogMzhweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IC0wLjA0ZW07CiAgICB9CiAgICAubGstc3ViIHsKICAgICAgZm9udC1mYW1pbHk6ICdKZXRCcmFpbnMgTW9ubycsIHVpLW1vbm9zcGFjZSwgbW9ub3NwYWNlOwogICAgICBmb250LXdlaWdodDogNjAwOwogICAgICBmb250LXNpemU6IDEzcHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAwLjEyZW07CiAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICB9CiAgPC9zdHlsZT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLCAwKSI+CiAgICA8cG9seWdvbiBwb2ludHM9IjUwLDEwIDg1LDMwIDg1LDcwIDUwLDkwIDE1LDcwIDE1LDMwIiBzdHJva2U9IiMwRjE3MkEiIHN0cm9rZS13aWR0aD0iOCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9Ijg1IiBjeT0iMzAiIHI9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMxIDY3LDQwLjggNTAsNTAuNSAzMyw0MC44IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzMyw0MC44IDUwLDUwLjUgNTAsNzAgMzMsNjAuMiIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iNjcsNDAuOCA2Nyw2MC4yIDUwLDcwIDUwLDUwLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjUiIHI9IjUuNSIgZmlsbD0iI0ZBRkFGQSIvPgogIDwvZz4KICA8dGV4dCB4PSIxMTQiIHk9IjU0IiBmaWxsPSIjMEYxNzJBIiBjbGFzcz0ibGstbWFpbiI+TW9iaWxlIE9yYml0PC90ZXh0PgogIDxyZWN0IHg9IjExNCIgeT0iNjUiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIGZpbGw9IiMwNTk2NjkiLz4KICA8dGV4dCB4PSIxMjgiIHk9IjczIiBmaWxsPSIjNjQ3NDhCIiBjbGFzcz0ibGstc3ViIj5ieSBDRVNJQyDigKIgUnVzdCAmIEZsdXR0ZXIgRW5naW5lPC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
@@ -2499,14 +2547,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">CESIC Lab</text>
-  <rect x="325.5" y="44" width="8" height="8" fill="#10B981"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">APONTI Technological Residency</text>
+  <rect x="114" y="65" width="7" height="7" fill="#10B981"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">APONTI Technological Residency</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-lockup-dark.svg</span>
-                      <a class="btn-action" download="residency-lab-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iI0Y4RkFGQyIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzOEJERjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkNFU0lDIExhYjwvdGV4dD4KICA8cmVjdCB4PSIzMjUuNSIgeT0iNDQiIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8dGV4dCB4PSIxMTYiIHk9Ijc2IiBmaWxsPSIjOTRBM0I4IiBjbGFzcz0ibGstc3ViIj5BUE9OVEkgVGVjaG5vbG9naWNhbCBSZXNpZGVuY3k8L3RleHQ+Cjwvc3ZnPg==">Baixar</a>
+                      <a class="btn-action" download="residency-lab-lockup-dark.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChkYXJrKTwvdGl0bGU+CiAgPHN0eWxlPgogICAgLmxrLW1haW4gewogICAgICBmb250LWZhbWlseTogJ1BsdXMgSmFrYXJ0YSBTYW5zJywgJ0ludGVyJywgc3lzdGVtLXVpLCAtYXBwbGUtc3lzdGVtLCBzYW5zLXNlcmlmOwogICAgICBmb250LXdlaWdodDogODAwOwogICAgICBmb250LXNpemU6IDM4cHg7CiAgICAgIGxldHRlci1zcGFjaW5nOiAtMC4wNGVtOwogICAgfQogICAgLmxrLXN1YiB7CiAgICAgIGZvbnQtZmFtaWx5OiAnSmV0QnJhaW5zIE1vbm8nLCB1aS1tb25vc3BhY2UsIG1vbm9zcGFjZTsKICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICBsZXR0ZXItc3BhY2luZzogMC4xMmVtOwogICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlOwogICAgfQogIDwvc3R5bGU+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwgMCkiPgogICAgPHBvbHlnb24gcG9pbnRzPSI1MCwxMCA4MywyOSA1MCw0NyAxNywyOSIgZmlsbD0iI0Y4RkFGQyIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTUsMzIuNSA0OCw1MS41IDQ4LDg5LjUgMTUsNzAuNSIgZmlsbD0iIzA1OTY2OSIvPgogIDxwb2x5Z29uIHBvaW50cz0iODUsMzIuNSA4NSw3MC41IDUyLDg5LjUgNTIsNTEuNSIgZmlsbD0iIzM4QkRGOCIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMjcgNzAsMzguNSA3MCw2MS41IDUwLDczIDMwLDYxLjUgMzAsMzguNSIgZmlsbD0iIzA5MEQxNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNTAsMzMgNjUsNDEuNiA1MCw1MC4yIDM1LDQxLjYiIGZpbGw9IiMzNEQzOTkiLz4KICA8cG9seWdvbiBwb2ludHM9IjM1LDQxLjYgNTAsNTAuMiA1MCw2Ny40IDM1LDU4LjgiIGZpbGw9IiMxMEI5ODEiLz4KICA8cG9seWdvbiBwb2ludHM9IjY1LDQxLjYgNjUsNTguOCA1MCw2Ny40IDUwLDUwLjIiIGZpbGw9IiMzOEJERjgiLz4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUwLjIiIHI9IjUiIGZpbGw9IiNGOEZBRkMiLz4KICA8L2c+CiAgPHRleHQgeD0iMTE0IiB5PSI1NCIgZmlsbD0iI0Y4RkFGQyIgY2xhc3M9ImxrLW1haW4iPkNFU0lDIExhYjwvdGV4dD4KICA8cmVjdCB4PSIxMTQiIHk9IjY1IiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHRleHQgeD0iMTI4IiB5PSI3MyIgZmlsbD0iIzk0QTNCOCIgY2xhc3M9ImxrLXN1YiI+QVBPTlRJIFRlY2hub2xvZ2ljYWwgUmVzaWRlbmN5PC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
                     </div>
                   </div>
 
@@ -2541,14 +2589,14 @@
   <circle cx="50" cy="50.2" r="5" fill="#FAFAFA"/>
   </g>
   <text x="114" y="54" fill="#0F172A" class="lk-main">CESIC Lab</text>
-  <rect x="325.5" y="44" width="8" height="8" fill="#059669"/>
-  <text x="116" y="76" fill="#64748B" class="lk-sub">APONTI Technological Residency</text>
+  <rect x="114" y="65" width="7" height="7" fill="#059669"/>
+  <text x="128" y="73" fill="#64748B" class="lk-sub">APONTI Technological Residency</text>
 </svg>
                       </div>
                     </div>
                     <div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
                       <span style="font-family:var(--font-mono);font-size:10.5px;color:#334155;word-break:break-all;">residency-lab-lockup-light.svg</span>
-                      <a class="btn-action" download="residency-lab-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMwRjE3MkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMDI4NEM3Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5DRVNJQyBMYWI8L3RleHQ+CiAgPHJlY3QgeD0iMzI1LjUiIHk9IjQ0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMDU5NjY5Ii8+CiAgPHRleHQgeD0iMTE2IiB5PSI3NiIgZmlsbD0iIzY0NzQ4QiIgY2xhc3M9ImxrLXN1YiI+QVBPTlRJIFRlY2hub2xvZ2ljYWwgUmVzaWRlbmN5PC90ZXh0Pgo8L3N2Zz4=">Baixar</a>
+                      <a class="btn-action" download="residency-lab-lockup-light.svg" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MjAgMTAwIiBmaWxsPSJub25lIj4KICA8dGl0bGU+Q0VTSUMgTGFiIEFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeSDigJQgT2ZmaWNpYWwgTG9ja3VwIChsaWdodCk8L3RpdGxlPgogIDxzdHlsZT4KICAgIC5say1tYWluIHsKICAgICAgZm9udC1mYW1pbHk6ICdQbHVzIEpha2FydGEgU2FucycsICdJbnRlcicsIHN5c3RlbS11aSwgLWFwcGxlLXN5c3RlbSwgc2Fucy1zZXJpZjsKICAgICAgZm9udC13ZWlnaHQ6IDgwMDsKICAgICAgZm9udC1zaXplOiAzOHB4OwogICAgICBsZXR0ZXItc3BhY2luZzogLTAuMDRlbTsKICAgIH0KICAgIC5say1zdWIgewogICAgICBmb250LWZhbWlseTogJ0pldEJyYWlucyBNb25vJywgdWktbW9ub3NwYWNlLCBtb25vc3BhY2U7CiAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICAgIGZvbnQtc2l6ZTogMTNweDsKICAgICAgbGV0dGVyLXNwYWNpbmc6IDAuMTJlbTsKICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICAgIH0KICA8L3N0eWxlPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsIDApIj4KICAgIDxwb2x5Z29uIHBvaW50cz0iNTAsMTAgODMsMjkgNTAsNDcgMTcsMjkiIGZpbGw9IiMwRjE3MkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjE1LDMyLjUgNDgsNTEuNSA0OCw4OS41IDE1LDcwLjUiIGZpbGw9IiMwNTk2NjkiLz4KICA8cG9seWdvbiBwb2ludHM9Ijg1LDMyLjUgODUsNzAuNSA1Miw4OS41IDUyLDUxLjUiIGZpbGw9IiMwMjg0QzciLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDI3IDcwLDM4LjUgNzAsNjEuNSA1MCw3MyAzMCw2MS41IDMwLDM4LjUiIGZpbGw9IiNGQUZBRkEiLz4KICA8cG9seWdvbiBwb2ludHM9IjUwLDMzIDY1LDQxLjYgNTAsNTAuMiAzNSw0MS42IiBmaWxsPSIjMTBCOTgxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSIzNSw0MS42IDUwLDUwLjIgNTAsNjcuNCAzNSw1OC44IiBmaWxsPSIjMEYxNzJBIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2NSw0MS42IDY1LDU4LjggNTAsNjcuNCA1MCw1MC4yIiBmaWxsPSIjMDI4NEM3Ii8+CiAgPGNpcmNsZSBjeD0iNTAiIGN5PSI1MC4yIiByPSI1IiBmaWxsPSIjRkFGQUZBIi8+CiAgPC9nPgogIDx0ZXh0IHg9IjExNCIgeT0iNTQiIGZpbGw9IiMwRjE3MkEiIGNsYXNzPSJsay1tYWluIj5DRVNJQyBMYWI8L3RleHQ+CiAgPHJlY3QgeD0iMTE0IiB5PSI2NSIgd2lkdGg9IjciIGhlaWdodD0iNyIgZmlsbD0iIzA1OTY2OSIvPgogIDx0ZXh0IHg9IjEyOCIgeT0iNzMiIGZpbGw9IiM2NDc0OEIiIGNsYXNzPSJsay1zdWIiPkFQT05USSBUZWNobm9sb2dpY2FsIFJlc2lkZW5jeTwvdGV4dD4KPC9zdmc+">Baixar</a>
                     </div>
                   </div>
             </div>

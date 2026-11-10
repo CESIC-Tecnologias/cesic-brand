@@ -91,15 +91,20 @@ assert.ok(
   'Mobile Orbit Dark MUST have pure white (#F8FAFC) center hub'
 );
 
-// 3. Check all 10 Wordmark SVGs
+// 3. Check all 10 Wordmark SVGs and calibrated dotX coordinates
 for (const file of EXPECTED_WORDMARKS) {
   const wm = checkSvgFile(path.join('assets', 'wordmarks', file));
   assert.ok(wm.includes('<rect'), `Wordmark ${file} must contain geometric square period <rect>`);
 }
+const gastroWm = checkSvgFile('assets/wordmarks/gastro-core-wordmark-light.svg');
+assert.ok(gastroWm.includes('x="280"'), 'gastro-core wordmark must use calibrated dotX=280 to prevent glyph collision');
+const cesicTechWm = checkSvgFile('assets/wordmarks/cesic-tech-wordmark-light.svg');
+assert.ok(cesicTechWm.includes('x="188"'), 'cesic-tech wordmark must use calibrated dotX=188');
 
 // 4. Check all 10 Lockup SVGs
 for (const file of EXPECTED_LOCKUPS) {
-  checkSvgFile(path.join('assets', 'lockups', file));
+  const lk = checkSvgFile(path.join('assets', 'lockups', file));
+  assert.ok(!lk.includes('y="44" width="8"'), `Lockup ${file} must not have floating uncalibrated square dot`);
 }
 
 // 5. Task 2 Checks: Brand Book Web App, BRAND_BOOK.md, README.md, and Anti-Emoji Rule
@@ -140,6 +145,9 @@ assert.ok(
 );
 assert.ok(htmlContent.includes('PMS 3285 C'), 'Missing Pantone specification in Brand Book HTML');
 assert.ok(htmlContent.includes('2X'), 'Missing 2X partnership lockup clearspace ratio');
+assert.ok(htmlContent.includes('SSOT: c:\\cesic\\cesic-brand'), 'Sidebar SSOT path must have properly escaped backslashes');
+const dontCardsCount = (htmlContent.match(/class="dont-card"/g) || []).length;
+assert.equal(dontCardsCount, 9, `Expected 9 visual Don't cards in 3x3 grid, found ${dontCardsCount}`);
 
 // Anti-Emoji Rule check (blocks common Pictographs/Emojis)
 const emojiRegex = /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u;

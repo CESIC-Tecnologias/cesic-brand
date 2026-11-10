@@ -195,10 +195,8 @@ function symbolResidencyLabDark(cutout = '#090D16') {
 // ============================================================================
 // 2. ARCHITECTURAL INLINE WORDMARKS (CESIC■TECH, CESIC■LABS, etc.)
 // ============================================================================
-function createWordmarkSvg({ leftText, rightText, dotColor, mode, width = 560 }) {
+function createWordmarkSvg({ leftText, rightText, dotX, rightX, dotColor, mode, width = 560 }) {
   const textColor = mode === 'light' ? '#0F172A' : '#F8FAFC';
-  const dotX = Math.round(leftText.length * 41.5 + 18);
-  const rightX = dotX + 22;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 96" fill="none">
   <title>${leftText}.${rightText} — Architectural Inline Wordmark (${mode})</title>
   <style>
@@ -242,8 +240,8 @@ function createLockupSvg({ innerSymbolMarkup, primaryText, secondaryText, dotCol
     ${innerSymbolMarkup}
   </g>
   <text x="114" y="54" fill="${textColor}" class="lk-main">${primaryText}</text>
-  <rect x="${114 + primaryText.length * 23.5}" y="44" width="8" height="8" fill="${dotColor}"/>
-  <text x="116" y="76" fill="${subColor}" class="lk-sub">${secondaryText}</text>
+  <rect x="114" y="65" width="7" height="7" fill="${dotColor}"/>
+  <text x="128" y="73" fill="${subColor}" class="lk-sub">${secondaryText}</text>
 </svg>`;
 }
 
@@ -278,22 +276,22 @@ for (const [filename, content] of Object.entries(symbolsMap)) {
 
 // Write Wordmarks
 const wordmarksConfig = [
-  { slug: 'cesic-tech', left: 'CESIC', right: 'TECH', lightDot: '#059669', darkDot: '#10B981', width: 460 },
-  { slug: 'cesic-labs', left: 'CESIC', right: 'LABS', lightDot: '#059669', darkDot: '#10B981', width: 460 },
-  { slug: 'gastro-core', left: 'GASTRO', right: 'CORE', lightDot: '#EA580C', darkDot: '#F59E0B', width: 540 },
-  { slug: 'desk-comm', left: 'DESK', right: 'COMM', lightDot: '#0284C7', darkDot: '#38BDF8', width: 490 },
-  { slug: 'mobile-orbit', left: 'MOBILE', right: 'ORBIT', lightDot: '#059669', darkDot: '#10B981', width: 550 },
+  { slug: 'cesic-tech', left: 'CESIC', right: 'TECH', dotX: 188, rightX: 210, lightDot: '#059669', darkDot: '#10B981', width: 410 },
+  { slug: 'cesic-labs', left: 'CESIC', right: 'LABS', dotX: 188, rightX: 210, lightDot: '#059669', darkDot: '#10B981', width: 410 },
+  { slug: 'gastro-core', left: 'GASTRO', right: 'CORE', dotX: 280, rightX: 302, lightDot: '#EA580C', darkDot: '#F59E0B', width: 520 },
+  { slug: 'desk-comm', left: 'DESK', right: 'COMM', dotX: 186, rightX: 208, lightDot: '#0284C7', darkDot: '#38BDF8', width: 470 },
+  { slug: 'mobile-orbit', left: 'MOBILE', right: 'ORBIT', dotX: 264, rightX: 286, lightDot: '#059669', darkDot: '#10B981', width: 520 },
 ];
 
 for (const wm of wordmarksConfig) {
   fs.writeFileSync(
     path.join(WORDMARKS_DIR, `${wm.slug}-wordmark-light.svg`),
-    createWordmarkSvg({ leftText: wm.left, rightText: wm.right, dotColor: wm.lightDot, mode: 'light', width: wm.width }) + '\n',
+    createWordmarkSvg({ leftText: wm.left, rightText: wm.right, dotX: wm.dotX, rightX: wm.rightX, dotColor: wm.lightDot, mode: 'light', width: wm.width }) + '\n',
     'utf8'
   );
   fs.writeFileSync(
     path.join(WORDMARKS_DIR, `${wm.slug}-wordmark-dark.svg`),
-    createWordmarkSvg({ leftText: wm.left, rightText: wm.right, dotColor: wm.darkDot, mode: 'dark', width: wm.width }) + '\n',
+    createWordmarkSvg({ leftText: wm.left, rightText: wm.right, dotX: wm.dotX, rightX: wm.rightX, dotColor: wm.darkDot, mode: 'dark', width: wm.width }) + '\n',
     'utf8'
   );
 }
@@ -373,3 +371,4 @@ for (const lk of lockupsConfig) {
 }
 
 console.log('Generated 33 official SVG brand assets in c:\\cesic\\cesic-brand\\assets');
+

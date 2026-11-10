@@ -24,6 +24,6 @@
   <circle cx="50" cy="50.5" r="5.5" fill="#F8FAFC"/>
   </g>
   <text x="114" y="54" fill="#F8FAFC" class="lk-main">Mobile Orbit</text>
-  <rect x="396" y="44" width="8" height="8" fill="#10B981"/>
-  <text x="116" y="76" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
+  <rect x="114" y="65" width="7" height="7" fill="#10B981"/>
+  <text x="128" y="73" fill="#94A3B8" class="lk-sub">by CESIC • Rust & Flutter Engine</text>
 </svg>

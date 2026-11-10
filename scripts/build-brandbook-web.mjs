@@ -543,7 +543,7 @@ const html = `<!DOCTYPE html>
 
     <div class="sidebar-footer">
       <div>ORG: <a href="https://github.com/CESIC-Tecnologias" target="_blank" rel="noreferrer">CESIC-Tecnologias</a></div>
-      <div style="margin-top:4px;">SSOT: c:\cesic\cesic-brand</div>
+      <div style="margin-top:4px;">SSOT: c:\\cesic\\cesic-brand</div>
       <div style="margin-top:4px;color:#10B981;">STATUS: OFFICIAL RELEASE</div>
     </div>
   </aside>
@@ -1236,6 +1236,44 @@ const html = `<!DOCTYPE html>
               </svg>
             </div>
             <div class="dont-caption"><span class="dont-x">X</span> Não altere as cores institucionais.</div>
+          </div>
+
+          <!-- Don't 7: Photo/Pattern Masking -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <defs>
+                  <pattern id="badStripes" width="8" height="8" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                    <line x1="0" y1="0" x2="0" y2="8" stroke="#0F172A" stroke-width="4" />
+                  </pattern>
+                </defs>
+                <polygon points="50,10 83,29 50,47 17,29" fill="url(#badStripes)"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" fill="url(#badStripes)"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" fill="url(#badStripes)"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não preencha com fotos ou texturas.</div>
+          </div>
+
+          <!-- Don't 8: Thin Outline Only -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+                <polygon points="50,10 83,29 50,47 17,29" stroke="#0F172A" stroke-width="1"/>
+                <polygon points="15,32.5 48,51.5 48,89.5 15,70.5" stroke="#0F172A" stroke-width="1"/>
+                <polygon points="85,32.5 85,70.5 52,89.5 52,51.5" stroke="#0F172A" stroke-width="1"/>
+                <circle cx="50" cy="50.2" r="5" stroke="#0F172A" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não use contorno vazado sem preenchimento.</div>
+          </div>
+
+          <!-- Don't 9: Low-Res Blurry Raster -->
+          <div class="dont-card">
+            <div class="dont-stage">
+              <div style="width:88px;height:88px;filter:blur(2.5px);opacity:0.75;">${assetsMap['symbols/cesic-master-light.svg']}</div>
+            </div>
+            <div class="dont-caption"><span class="dont-x">X</span> Não use imagens borradas de baixa resolução.</div>
           </div>
         </div>
       </div>

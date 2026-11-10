@@ -98,3 +98,4 @@ A CESIC adota o **Sistema Híbrido de Suíte de Produtos**: a holding e o labora
 7. **Não utilize cores fora da paleta oficial ou com contraste insuficiente.**
 8. **Não utilize contornos finos vazados (wireframe fino) em tamanhos pequenos.**
 9. **Não utilize versões rasterizadas de baixa resolução (PNG borrado):** Utilize sempre os arquivos `.svg` vetoriais deste repositório.
+
