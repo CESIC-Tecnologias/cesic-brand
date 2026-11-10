@@ -1085,7 +1085,7 @@ const html = `<!DOCTYPE html>
                 <div class="arch-wm" style="font-size:32px;color:#0F172A;">CESIC<span class="dot" style="background:#059669;"></span>TECH</div>
               </div>
               <div style="height:150px;background:#059669;border-radius:14px;display:flex;align-items:center;justify-content:center;">
-                <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">CESIC<span class="dot" style="background:#FFFFFF;"></span>TECH</div>
+                <div class="arch-wm" style="font-size:32px;color:#FFFFFF;">CESIC<span class="dot" style="background:#090D16;"></span>TECH</div>
               </div>
 
               <!-- Row 3: Monochrome & Product Wordmarks -->
@@ -1353,9 +1353,8 @@ const html = `<!DOCTYPE html>
             <div class="grid-3">
               ${Object.entries(assetsMap)
                 .map(([key, svgCode]) => {
-                  const isMonoLight = key.includes('mono-light');
-                  const isDark = key.includes('dark') || key.includes('favicon');
-                  const bg = isMonoLight ? '#059669' : isDark ? '#090D16' : '#FAFAFA';
+                  const isDark = key.includes('dark') || key.includes('mono-light') || key.includes('favicon');
+                  const bg = isDark ? '#090D16' : '#FAFAFA';
                   const filename = key.split('/')[1];
                   const encoded = Buffer.from(svgCode, 'utf8').toString('base64');
                   const isSymbol = key.startsWith('symbols/');

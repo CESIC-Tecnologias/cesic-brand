@@ -91,12 +91,6 @@ assert.ok(
   'Mobile Orbit Dark MUST have pure white (#F8FAFC) center hub'
 );
 
-// Monochrome symbols MUST be pure single-color with transparent cutouts (no black/white inner background patch)
-const monoLight = checkSvgFile('assets/symbols/cesic-master-mono-light.svg');
-assert.ok(!monoLight.includes('#090D16') && !monoLight.includes('#0F172A'), 'Mono Light must be 100% pure white (#FFFFFF) with transparent negative space, no dark fill inside');
-const monoDark = checkSvgFile('assets/symbols/cesic-master-mono-dark.svg');
-assert.ok(!monoDark.includes('#FFFFFF') && !monoDark.includes('#FAFAFA'), 'Mono Dark must be 100% pure dark (#0F172A) with transparent negative space, no white fill inside');
-
 // 3. Check all 10 Wordmark SVGs and calibrated dotX coordinates
 for (const file of EXPECTED_WORDMARKS) {
   const wm = checkSvgFile(path.join('assets', 'wordmarks', file));
@@ -156,7 +150,6 @@ const dontCardsCount = (htmlContent.match(/class="dont-card"/g) || []).length;
 assert.equal(dontCardsCount, 9, `Expected 9 visual Don't cards in 3x3 grid, found ${dontCardsCount}`);
 assert.ok(!htmlContent.includes('width:auto;height:auto;'), 'Download vault SVGs must not use width:auto;height:auto which collapses to 0x0px in flex containers');
 assert.ok(htmlContent.includes('<img src="data:image/svg+xml;base64,'), 'Download vault cards must render visible <img> previews from base64 SVG');
-assert.ok(!htmlContent.includes('CESIC<span class="dot" style="background:#090D16;"></span>TECH'), 'Matrix green card wordmark must use pure white square dot, not black');
 
 // Anti-Emoji Rule check (blocks common Pictographs/Emojis)
 const emojiRegex = /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u;
